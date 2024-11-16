@@ -1,0 +1,65 @@
+//The sass variables are represent the colors and fonts used in the website.
+
+//You can find each class name used by typing "Ctrl + F" 
+$poppins: "Poppins", sans-serif;
+$lato: "Lato", sans-serif;
+$red: #D22D33;
+nav{
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+    padding: 15px 0px !important;
+    background-color: white;
+    //This is the navbar collapse button
+    .collapse-btn{
+        border: none;
+        outline: none;
+        margin: 0 !important;
+    }
+    .collapse-btn:active, .collapse-btn:focus{
+        border: none;
+        box-shadow: none;
+        outline: none;
+    }
+    .quick-chow-logo{
+        width: 150px;
+    }
+    .services-dropdown{
+        ul{
+            border: none;
+        }
+    }
+    .nav-btn{
+        background-color: $red;
+        color: white;
+        font-family: $poppins;
+        width: 135px;
+        height: 40px;
+        border-radius: 19px;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    a{
+        font-family: $poppins;
+    }
+}
+.navbar-shadow {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  }
+
+//This media query is for mobile devices or screen sizes less than or equal to 576px
+@media (max-width: 576px){
+    nav{
+        padding: 10px 0px !important;
+    }
+    .quick-chow-logo{
+        width: 100px;
+    }
+    .navbar-nav{
+        margin-top: 20px;
+        li{
+            font-size: 1.2rem;
+            margin-left: 15px;
+        }
+    }
+}
