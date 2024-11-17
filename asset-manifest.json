@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/4Krativr/quickchow%20/static/css/main.966d305c.css",
-    "main.js": "/4Krativr/quickchow%20/static/js/main.6d0d2d18.js",
-    "static/media/hero-food-img.png": "/4Krativr/quickchow%20/static/media/hero-food-img.506dc0601cad49c67154.png",
-    "static/media/PH.png": "/4Krativr/quickchow%20/static/media/PH.d451002994dd5215cdba.png",
-    "static/media/chef-img.png": "/4Krativr/quickchow%20/static/media/chef-img.1c43090c91192a38c6fe.png",
-    "static/media/Order food-pana 1.svg": "/4Krativr/quickchow%20/static/media/Order food-pana 1.b766e234d813e4de9f3617afd24069a8.svg",
-    "static/media/quick-chow-logo.png": "/4Krativr/quickchow%20/static/media/quick-chow-logo.02aadda2336e4d060a6e.png",
-    "static/media/Take Away-rafiki 1.svg": "/4Krativr/quickchow%20/static/media/Take Away-rafiki 1.286469ccdf710c92a8d7d5ce53f1e6e5.svg",
-    "static/media/Waiters-rafiki 1.png": "/4Krativr/quickchow%20/static/media/Waiters-rafiki 1.6578fc0b070dd1571807.png",
-    "index.html": "/4Krativr/quickchow%20/index.html",
-    "main.966d305c.css.map": "/4Krativr/quickchow%20/static/css/main.966d305c.css.map",
-    "main.6d0d2d18.js.map": "/4Krativr/quickchow%20/static/js/main.6d0d2d18.js.map"
+    "main.css": "/quickchow/static/css/main.a777a961.css",
+    "main.js": "/quickchow/static/js/main.9a706156.js",
+    "static/media/hero-food-img.png": "/quickchow/static/media/hero-food-img.506dc0601cad49c67154.png",
+    "static/media/PH.png": "/quickchow/static/media/PH.d451002994dd5215cdba.png",
+    "static/media/chef-img.png": "/quickchow/static/media/chef-img.1c43090c91192a38c6fe.png",
+    "static/media/Order food-pana 1.svg": "/quickchow/static/media/Order food-pana 1.b766e234d813e4de9f3617afd24069a8.svg",
+    "static/media/quick-chow-logo.png": "/quickchow/static/media/quick-chow-logo.02aadda2336e4d060a6e.png",
+    "static/media/Take Away-rafiki 1.svg": "/quickchow/static/media/Take Away-rafiki 1.286469ccdf710c92a8d7d5ce53f1e6e5.svg",
+    "static/media/Waiters-rafiki 1.png": "/quickchow/static/media/Waiters-rafiki 1.6578fc0b070dd1571807.png",
+    "index.html": "/quickchow/index.html",
+    "main.a777a961.css.map": "/quickchow/static/css/main.a777a961.css.map",
+    "main.9a706156.js.map": "/quickchow/static/js/main.9a706156.js.map"
   },
   "entrypoints": [
-    "static/css/main.966d305c.css",
-    "static/js/main.6d0d2d18.js"
+    "static/css/main.a777a961.css",
+    "static/js/main.9a706156.js"
   ]
 }
