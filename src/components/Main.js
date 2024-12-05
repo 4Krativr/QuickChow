@@ -55,43 +55,34 @@ function Main(){
                 </div>
             `
     }
-    //The useEffect function manages and rerenders the content on the web page
+    //The useEffect hook manages and rerenders the content on the web page
     useEffect(() => {
         document.querySelector('.js-review-content').innerHTML = reviews()
         const handleClick = (move) => {
-            //The setTimeout function takes two parameters and executes the code based on the parameters given.
-            setTimeout(() => {
-                if(move === '>'){
-                    count++;
+            const customerLength = customerReview.length - 1;
+            if(move === '>'){
+                count++;
+            }
+            else if(move === '<'){
+                if(count === 0){
+                    count = customerLength;
                 }
-                else if(move === '<'){
-                    if(count <= -1){
-                        const customerLength = customerReview.length - 1;
-                        count = customerLength;
-                    }
-                    else{
-                        count--;
-                    }
+                else{
+                    count--;
                 }
-                document.querySelector('.js-review-content').innerHTML = reviews()
-            },500)
+            }
+            document.querySelector('.js-review-content').innerHTML = reviews()
         }
+        const handleRightClick = () => handleClick('>');
+        const handleLeftClick = () => handleClick('<');
         //This  block of code targets the arrow buttons on the page. It gets the elements and adds and removes event listeners to avoid unexpected errors.
         const rightArrow = document.querySelector('.js-right-arrow');
         const leftArrow = document.querySelector('.js-left-arrow')
-        rightArrow?.addEventListener('click', () => {
-            handleClick('>')
-        });
-        leftArrow?.addEventListener('click', () => {
-            handleClick('<')
-        });
+        rightArrow?.addEventListener('click', handleRightClick);
+        leftArrow?.addEventListener('click', handleLeftClick);
         return () => {
-            rightArrow?.removeEventListener('click', () => {
-                handleClick('>')
-            });
-            leftArrow?.removeEventListener('click', () => {
-                handleClick('<')
-            });
+            rightArrow?.removeEventListener('click', handleRightClick);
+            leftArrow?.removeEventListener('click', handleLeftClick);
         };
     }, []);
     return(

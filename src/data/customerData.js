@@ -8,7 +8,7 @@ export const customerReview = [
     },
     {
         name: 'Okorie Victor',
-        class: 'Food Enthusiast',
+        class: 'Customer',
         profilePic: require('../assets/reviewImages/Ellipse 9.png'),
         review:  `I really love the speed and comfort QuickChow adds to my life. I  literally stay indoors everyday while QuickChow handles my everyday meals`,
         star: require('../assets/reviewImages/star-rating.png')
