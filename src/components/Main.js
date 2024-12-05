@@ -1,6 +1,6 @@
 import '../styles/main.scss';
 import { customerReview } from '../data/customerData';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/general-styles.scss';
 import 'animate.css';
 import womanOrder from '../assets/main-images/Order food-pana 1.svg';
@@ -9,8 +9,7 @@ import waiters from '../assets/main-images/Waiters-rafiki 1.png';
 import reviewsImg from '../assets/main-images/chef-img.png'
 import leftArrow from '../assets/main-images/left-arrow.png';
 import rightArrow from '../assets/main-images/right-arrow.png';
-import starRating from '../assets/main-images/stars-ratings.png';
-import customerImg from '../assets/main-images/Ellipse 9.png';
+
 import appleStore from '../assets/download-images/apple-icon.png';
 import playStore from '../assets/download-images/playstore-icon.png';
 
@@ -18,52 +17,83 @@ import playStore from '../assets/download-images/playstore-icon.png';
 
 //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
 
-//PS: Do not touch the javascipt code i commented out, make wahala no dey. ha, ha, ha.
+
+//This function renders the HTML generated when the arrow function is clicked.
 function Main(){
-    
-    // let count = 0;
-    // function reviews(index){
-    //     const customerLength = customerReview.length - 1;
-    //     const reviewsCount = customerReview[index];
-    //     if(customerLength === index){
-    //         count = 0;
-    //         console.log('ys')
-    //     }else{
-    //         console.log('nio')
-    //         const reviewHTML = `
-    //             <p className="lead">
-    //                 ${reviewsCount.review}
-    //             </p>
-    //             <div className="customer-reviews">
-    //                 <div className="customer-reviews-content">
-    //                     <img src=${reviewsCount.profilePic} alt="A customer profile" />
-    //                     <div>
-    //                         <h6>${reviewsCount.name}</h6>
-    //                         <p>${reviewsCount.class}</p>
-    //                     </div>
-    //                 </div>
-    //                 <div className="star-rating">
-    //                     <img src=${reviewsCount.starRating} alt="star" /> 
-    //                     <p>4.8</p>
-    //                 </div>
-    //             </div>
-    //         `
-    //         return reviewHTML
-    //     }
-    // }
-    // useEffect(() => {
-    //     document.querySelector('.js-review-content').innerHTML = reviews(count)
-    //     const handleClick = () => {
-    //         count++
-    //         document.querySelector('.js-review-content').innerHTML = reviews(count)
-    //         console.log('fish')
-    //     }
-    //     const rightArrow = document.querySelector('.js-right-arrow');
-    //     rightArrow?.addEventListener('click', handleClick);
-    //     return () => {
-    //         rightArrow?.removeEventListener('click', handleClick);
-    //     };
-    // }, []);
+    let count = 0;
+    function reviews() {
+        const customerLength = customerReview.length - 1;
+        let reviewsCount = customerReview[count];
+
+        if (reviewsCount) {
+            return generateReview(reviewsCount);
+        } else if (count >= customerLength) {
+            count = 0;
+            reviewsCount = customerReview[count];
+            return generateReview(reviewsCount);
+        }
+    }
+
+    //This function takes a perimeter which generates the HTML for the customer reviews.
+    function generateReview(reviews){
+        return `
+                <p class="lead">
+                   ${reviews.review}
+                </p>
+                <div class="customer-reviews">
+                    <div class="customer-reviews-content">
+                        <img src=${reviews.profilePic} alt="A customer profile" />
+                        <div>
+                            <h6>${reviews.name}</h6>
+                            <p>${reviews.class}</p>
+                        </div>
+                    </div>
+                    <div class="star-rating">
+                    <img src=${reviews.star} alt='star rating'/>
+                        <p>4.8</p>
+                    </div>
+                </div>
+            `
+    }
+    //The useEffect function manages and rerenders the content on the web page
+    useEffect(() => {
+        document.querySelector('.js-review-content').innerHTML = reviews()
+        const handleClick = (move) => {
+            //The setTimeout function takes two parameters and executes the code based on the parameters given.
+            setTimeout(() => {
+                if(move === '>'){
+                    count++;
+                }
+                else if(move === '<'){
+                    if(count <= -1){
+                        const customerLength = customerReview.length - 1;
+                        count = customerLength;
+                    }
+                    else{
+                        count--;
+                    }
+                }
+                document.querySelector('.js-review-content').innerHTML = reviews()
+            },500)
+        }
+        //This  block of code targets the arrow buttons on the page. It gets the elements and adds and removes event listeners to avoid unexpected errors.
+        const rightArrow = document.querySelector('.js-right-arrow');
+        const leftArrow = document.querySelector('.js-left-arrow')
+        rightArrow?.addEventListener('click', () => {
+            handleClick('>')
+        });
+        leftArrow?.addEventListener('click', () => {
+            handleClick('<')
+        });
+        return () => {
+            rightArrow?.removeEventListener('click', () => {
+                handleClick('>')
+            });
+            leftArrow?.removeEventListener('click', () => {
+                handleClick('<')
+            });
+        };
+    }, []);
     return(
         <main>
             <section className= "container col-xxl-10 services" id='services'>
@@ -111,7 +141,7 @@ function Main(){
                         <div className="reviews-title">
                             <h4>WHAT THEY SAY</h4>
                             <div className="reviews-title-arrows">
-                                <div className="left-arrow">
+                                <div className="left-arrow js-left-arrow">
                                     <img src={leftArrow} alt="left arrow icon" />
                                 </div>
                                 <div className="right-arrow js-right-arrow">
@@ -120,24 +150,7 @@ function Main(){
                             </div>
                         </div>
                         <h1 className="mb-3">What Our Customers Say About Us</h1>
-                        <div className='js-review-content'>
-                            <p className="lead">
-                                "QuickChow is the best. I’m honestly blown away by the speed and reliability of this food delivery service! My order arrived well before the estimated time, and everything was still fresh and hot. The app was super easy to use, and I appreciated the real-time tracking feature, so I knew exactly when to expect my food."
-                            </p>
-                            <div className="customer-reviews">
-                                <div className="customer-reviews-content">
-                                    <img src={customerImg} alt="A customer profile" />
-                                    <div>
-                                        <h6>Pastor Chizurum</h6>
-                                        <p>Food Enthusiast</p>
-                                    </div>
-                                </div>
-                                <div className="star-rating">
-                                    <img src={starRating} alt="star" /> 
-                                    <p>4.8</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div className='js-review-content'></div>
                     </div>
                 </div>
             </section>

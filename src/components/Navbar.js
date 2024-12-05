@@ -34,12 +34,12 @@ function Navbar(){
                 <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="offcanvas offcanvas-end d-flex flex-column flex-lg-row" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <div className="offcanvas offcanvas-end d-flex flex-column flex-lg-row" tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                    <div className="offcanvas-header">
+                        <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                             <img src={quickchowLogo} alt="QuickChow logo" className= "quick-chow-logo"/>
                         </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <ul className="navbar-nav col-lg-8 justify-content-lg-evenly">
                         <li className="nav-item dropdown services-dropdown">

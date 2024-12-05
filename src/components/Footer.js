@@ -7,7 +7,7 @@ import '../styles/footer.scss';
 function Footer(){
     //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
     return(
-        <div className="container footer">
+        <div className="container-fluid footer">
             <footer className="row py-5">
                 <div className="mb-3 col-lg-3 socials">
                     <div className="col-3 news-letter d-lg-none">
@@ -30,10 +30,10 @@ function Footer(){
                         <a href="https://www.instagram.com/quickchow.app?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target='_blank' rel='noreferrer'>
                             <img src={instagram} alt="instagram icon" />
                         </a>
-                        <a href="https://www.facebook.com/p/QuickChow-61565639611211/">
+                        <a href="https://www.facebook.com/p/QuickChow-61565639611211/" target='_blank'>
                             <img src={facebook} alt="instagram icon" />
                         </a>
-                        <a href="https://x.com/quickchow_app?s=11">
+                        <a href="https://x.com/quickchow_app?s=11" target='_blank'>
                             <img src={twitter} alt="instagram icon" />
                         </a>
                     </div>
