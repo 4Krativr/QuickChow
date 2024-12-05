@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/quickchow/static/css/main.a777a961.css",
-    "main.js": "/quickchow/static/js/main.9a706156.js",
+    "main.css": "/quickchow/static/css/main.02bfaa16.css",
+    "main.js": "/quickchow/static/js/main.5dd1502c.js",
     "static/media/hero-food-img.png": "/quickchow/static/media/hero-food-img.506dc0601cad49c67154.png",
     "static/media/PH.png": "/quickchow/static/media/PH.d451002994dd5215cdba.png",
     "static/media/chef-img.png": "/quickchow/static/media/chef-img.1c43090c91192a38c6fe.png",
@@ -10,11 +10,11 @@
     "static/media/Take Away-rafiki 1.svg": "/quickchow/static/media/Take Away-rafiki 1.286469ccdf710c92a8d7d5ce53f1e6e5.svg",
     "static/media/Waiters-rafiki 1.png": "/quickchow/static/media/Waiters-rafiki 1.6578fc0b070dd1571807.png",
     "index.html": "/quickchow/index.html",
-    "main.a777a961.css.map": "/quickchow/static/css/main.a777a961.css.map",
-    "main.9a706156.js.map": "/quickchow/static/js/main.9a706156.js.map"
+    "main.02bfaa16.css.map": "/quickchow/static/css/main.02bfaa16.css.map",
+    "main.5dd1502c.js.map": "/quickchow/static/js/main.5dd1502c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a777a961.css",
-    "static/js/main.9a706156.js"
+    "static/css/main.02bfaa16.css",
+    "static/js/main.5dd1502c.js"
   ]
 }
