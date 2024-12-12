@@ -3,16 +3,15 @@ import { customerReview } from '../data/customerData';
 import { useEffect, useState } from 'react';
 import '../styles/general-styles.scss';
 import 'animate.css';
-import womanOrder from '../assets/main-images/Order food-pana 1.svg';
-import riders from '../assets/main-images/Take Away-rafiki 1.svg';
-import waiters from '../assets/main-images/Waiters-rafiki 1.png';
+import womanOrder from '../assets/main-images/order-food-img.svg';
+import riders from '../assets/main-images/delivery-img.svg';
+import waiters from '../assets/main-images/good-quality-img.svg';
 import reviewsImg from '../assets/main-images/chef-img.png'
 import leftArrow from '../assets/main-images/left-arrow.png';
 import rightArrow from '../assets/main-images/right-arrow.png';
-
 import appleStore from '../assets/download-images/apple-icon.png';
 import playStore from '../assets/download-images/playstore-icon.png';
-
+import rightLink from '../assets/main-images/right-arrow-link.png';
 
 
 //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
@@ -87,46 +86,52 @@ function Main(){
     }, []);
     return(
         <main>
-            <section className= "container col-xxl-10 services" id='services'>
+            <section className= "container services" id='services'>
                 <div className="services-title">
                     <h4>WHAT WE SERVE</h4>
                     <h1>Your Favourite Food Delivery Partner</h1>
                 </div>
-                <div className="row g-5 py-5 row-cols-1 row-cols-lg-3 services-content mt-3">
+                <div className="row g-5 py-5 row-cols-1 row-cols-lg-3 mt-3 services-content">
                     <div className="feature col">
-                        <div className="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
-                            <img src={womanOrder} alt="delivery" />
-                        </div>
-                        <h3 className="fs-2 text-body-emphasis mt-3">Easy To Order</h3>
+                        <img src={womanOrder} alt="delivery" className='service-img'/>
+                        <h3 className="fs-3 text-body-emphasis">Easy To Order</h3>
                         <p>
                             It only takes a few steps to order delicious meals from our mobile app.
                         </p>
+                        <a href="">
+                            Get Started
+                            <img src={rightLink} alt="arrow link" className='right-arrow-link'/>
+                        </a>
+                    </div>
+                    <div className="feature col">    
+                        <img src={riders} alt="delivery" className='service-img'/>
+                        <h3 className="fs-3 text-body-emphasis">Fast Delivery</h3>
+                        <p>
+                        Experience lightning-fast delivery that brings your favorite meals to your doorstep in no time.
+                        </p>
+                        <a href="">
+                            Get Started
+                            <img src={rightLink} alt="arrow link" className='right-arrow-link'/>
+                        </a>
                     </div>
                     <div className="feature col">
-                        <div className="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
-                            <img src={riders} alt="delivery" />
-                        </div>
-                        <h3 className="fs-2 text-body-emphasis">Fast Delivery</h3>
+                        <img src={waiters} alt="delivery" className='service-img'/>
+                        <h3 className="fs-3 text-body-emphasis">Best Quality</h3>
                         <p>
-                            We priotize speed, trust, and convenience, capturing the essence of quick, dependable delivery service.
+                        Savor every bite with top-quality food, made from the freshest ingredients.
                         </p>
-                    </div>
-                    <div className="feature col">
-                        <div className="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
-                            <img src={waiters} alt="delivery" />
-                        </div>
-                        <h3 className="fs-2 text-body-emphasis">Best Quality</h3>
-                        <p>
-                        We don't just offer fast delivery, quality is also important to us, that's why our catalogue is filled with the best meals from your favourite restaurants.
-                        </p>
+                        <a href="">
+                            Get Started
+                            <img src={rightLink} alt="arrow link" className='right-arrow-link'/>
+                        </a>
                     </div>
                 </div>
             </section>
 
-            <section className="reviews container col-xxl-10" id='reviews'>
+            <section className="reviews container" id='reviews'>
                 <div className="row g-5 py-5 reviews-box">
                     <div className="col-lg-6 reviews-img-div">
-                        <img src={reviewsImg} className="d-block mx-lg-auto img-fluid reviews-img" alt="quickchow review" loading="lazy"/>
+                        <img src={reviewsImg} className="reviews-img" alt="quickchow review" loading="lazy"/>
                     </div>
                     <div className="col-lg-6 reviews-content">
                         <div className="reviews-title">
@@ -146,7 +151,7 @@ function Main(){
                 </div>
             </section>
 
-            <section className="download  container col-xxl-10">
+            <section className="download  container">
                 <div className="row g-5">
                     <div className="col-10 col-sm-8 col-lg-6 download-img"></div>
                     <div className="col-lg-6 download-content">

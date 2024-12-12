@@ -1,6 +1,9 @@
 $poppins: "Poppins", sans-serif;
 $red: #D22D33;
 //Type in Ctrl + F to find the elements which bear the corresponding classes
+main{
+    padding: 0px 80px;
+}
 .services{
     .card-services{
         display: flex;
@@ -40,11 +43,21 @@ $red: #D22D33;
         }
     }
     .services-content{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
         div{
             display: flex;
             flex-direction: column;
-            align-items: center;
             margin-top: 24px;
+            padding: 0px !important;
+            width: 400px;
+            .service-img{
+                width: 100%;
+                border-radius: none;
+                object-fit: cover;
+                margin-bottom: 30px;
+            }
             h3{
                 font-family: $poppins;
                 font-size: 28px;
@@ -52,14 +65,21 @@ $red: #D22D33;
             }
             p{
                 font-size: 16px;
-                width: 314px;
-                text-align: center;
+                text-align: start;
                 font-weight: 400;
                 line-height: 30px;
             }
-            img{
-                width: 232px;
-               
+            a{
+                text-decoration: none;
+                color: $red;
+                font-weight: 600;
+                font-family: $poppins;
+                width: 120px;
+            }
+            .right-arrow-link{
+                width: 20px;
+                margin-left: 5px;
+                filter: invert(17%) sepia(85%) saturate(2995%) hue-rotate(345deg) brightness(102%) contrast(86%);
             }
         }
     }
@@ -70,10 +90,13 @@ $red: #D22D33;
     margin-top: 100px;
     .reviews-img-div{
         position: relative;
+        padding: 0;
         .reviews-img{
-            border-radius: 30px;
             width: 500px;
         }
+    }
+    .reviews-box{
+        align-items: start;
     }
     .reviews-content{
         h1{
@@ -244,9 +267,15 @@ $red: #D22D33;
 
 @media (max-width: 576px){
     main{
-        width: 100%;
         padding: 0px 20px;
         .services{
+            padding: 0px 10px;
+            justify-content: center;
+            .services-content{
+                padding: 0px 10px;
+                flex-direction: column;
+                gap: 40px;
+            }
             .services-title{
                 h1{
                     font-size: 40px;
@@ -262,6 +291,7 @@ $red: #D22D33;
             display: flex;
             justify-content: center;
             margin-top: 50px;
+            padding: 0;
             .reviews-img-div{
                 display: flex;
                 justify-content: center;
