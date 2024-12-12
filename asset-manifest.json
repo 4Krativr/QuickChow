@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/QuickChow/static/css/main.f6329971.css",
+    "main.js": "/QuickChow/static/js/main.7a1d4e10.js",
+    "static/media/order-food-img.svg": "/QuickChow/static/media/order-food-img.e3ec7ab640a602f707c651cee17dcd0e.svg",
+    "static/media/delivery-img.svg": "/QuickChow/static/media/delivery-img.85f88930c0345156feb7028f8a9f9bf5.svg",
+    "static/media/good-quality-img.svg": "/QuickChow/static/media/good-quality-img.77edc1a8b4ed035c1c4684d6e3add109.svg",
+    "static/media/hero-food-img.png": "/QuickChow/static/media/hero-food-img.506dc0601cad49c67154.png",
+    "static/media/PH.png": "/QuickChow/static/media/PH.d451002994dd5215cdba.png",
+    "static/media/chef-img.png": "/QuickChow/static/media/chef-img.1c43090c91192a38c6fe.png",
+    "static/media/quick-chow-logo.png": "/QuickChow/static/media/quick-chow-logo.02aadda2336e4d060a6e.png",
+    "index.html": "/QuickChow/index.html",
+    "main.f6329971.css.map": "/QuickChow/static/css/main.f6329971.css.map",
+    "main.7a1d4e10.js.map": "/QuickChow/static/js/main.7a1d4e10.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6329971.css",
+    "static/js/main.7a1d4e10.js"
+  ]
+}
