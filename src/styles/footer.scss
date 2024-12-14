@@ -1,13 +1,14 @@
 $redColor: #D22D33;
-$lightredColor: #FEE9DE;
 $poppins: "Poppins", serif;
 $lato: "Lato", sans-serif;
+$pink: #FACBCD;
 //Type in Ctrl + F to find the elements which bear the corresponding classes
 .footer{
     position: relative;
     padding: 0px 100px;
     margin-top: 150px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: $pink;
     .footer-info{
         .a-link{
             color: $redColor;
@@ -54,13 +55,14 @@ li{
         align-items: center;
         justify-content: space-around;
         padding: 14px 20px;
-        border: 1px #BDBDBD solid;
+        border: 1px solid $redColor;
         cursor: pointer;
         p{
             margin: 0;
             font-size: 14px;
             font-family: $poppins;
             width: 113px;
+            color: $redColor;
         }
         img{
             width: 20px;

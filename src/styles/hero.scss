@@ -1,8 +1,20 @@
 $red: #D22D33;
+$pink: #FACBCD;
 $poppins: "Poppins", sans-serif;
 //Type in Ctrl + F to find the elements which bear the corresponding classes
 .container-box{
-    margin-top: 8%;
+    background-color: $pink;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 20px !important;
+    margin-bottom: 150px;
+}
+.hero-box{
+    margin: 0px;
+    margin-top: 50px;
 }
 .hero-food{
     position: relative;
@@ -60,6 +72,7 @@ $poppins: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 0px;
     .delicious{
         color: $red;
     }
@@ -104,16 +117,15 @@ $poppins: "Poppins", sans-serif;
 //Media query for the hero section
 @media (max-width: 576px) {
     .container-box{
-        padding: 0px 0px!important;
         display: flex;
-        justify-content: center;
-        margin-top: 70px;
+        justify-content: start;
+        padding-top: 20px;
     }
    .hero-box{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 0px 0px;
+        padding: 0;
         width: 100%;
         .hero-content{
             gap: 20px;
