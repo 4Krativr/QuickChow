@@ -6,7 +6,6 @@ function App(){
     return(
         //All the components put together and rendered on the index.js file
         <div>
-            <Navbar />
             <Hero />
             <Main />
             <Footer />

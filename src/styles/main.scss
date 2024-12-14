@@ -1,5 +1,6 @@
 $poppins: "Poppins", sans-serif;
 $red: #D22D33;
+$pink: #FACBCD;
 //Type in Ctrl + F to find the elements which bear the corresponding classes
 main{
     padding: 0px 80px;
@@ -45,7 +46,8 @@ main{
     .services-content{
         display: flex;
         align-items: start;
-        justify-content: space-between;
+        justify-content: space-around;
+        gap: 20px;
         div{
             display: flex;
             flex-direction: column;
@@ -87,12 +89,82 @@ main{
 
 
 .reviews{
-    margin-top: 100px;
+    margin-top: 150px;
     .reviews-img-div{
         position: relative;
         padding: 0;
+        text-align: center;
         .reviews-img{
-            width: 500px;
+            width: 550px;
+        }
+        .floating-leaf{
+            position: absolute;
+            top: 0;
+            right: 150px;
+            transform: rotate(-50deg);
+            img{
+                width: 105px;
+            }
+        }
+        .floating-leaf-2{
+            position: absolute;
+            top: 0;
+            right: 90px;
+            img{
+                width: 147px;
+            }
+        }
+        .floating-onion{
+            position: absolute;
+            top: 40px;
+            left: 100px;
+            transform: rotate(-50deg);
+        }
+        .floating-onion-2{
+            position: absolute;
+            top: 50px;
+            left: 130px;
+        }
+        .customer-count{
+            position: absolute;
+            bottom: -50px;
+            right: 30px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px 40px;
+            h1{
+                font-family: Lato, 'sans-serif';
+                color: black;
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+                font-weight: 600;
+                text-align: center;
+            }
+            .customers{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .left{
+                    margin-left: -20px;
+                }
+                img{
+                    width: 60px;
+                }
+                .count-customers{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50px;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    width: 60px;
+                    height: 60px;
+                    background-color: $red;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+            
         }
     }
     .reviews-box{
@@ -196,12 +268,13 @@ main{
 
 
 .download{
-    margin-top: 100px;
+    margin-top: 150px;
     background-color: $red;
     position: relative;
     padding: 97px 85px;
     border-radius: 20px;
     color: white;
+    background-color: $pink;
     .download-img{
         width: 35%;
         height: 60vh;
@@ -215,6 +288,7 @@ main{
         border-top-right-radius: 30px;
     }
     .download-content{
+        color: black;
         p{
             font-size: 1rem;
             font-weight: 500;
@@ -224,7 +298,7 @@ main{
             h4{
                 font-family: $poppins;
                 font-size: 18px;
-                color: white;
+                color: $red;
                 font-weight: 600;
                 letter-spacing: 4px;
                 margin-bottom: 25px;
@@ -237,19 +311,35 @@ main{
         } 
         .download-btn{
             display: flex;
-            gap: 20px;
+            gap: 50px;
             a{
                 text-decoration: none;
             }
-            div{
+            .download-container{
                 display: flex;
                 align-items: center;
                 background-color: black;
-                width: 8em;
-                height: 2.5em;
                 border-radius: 5px;
                 gap: 10px;
-                padding: 0px 10px;
+                padding: 7px 0px;
+                padding-left: 8px;
+                .download-text{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: start;
+                    width: 100%;
+                    p{
+                        font-size: 0.7rem;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    h5{
+                        font-size: 1rem;
+                        color: white;
+                        margin: 0;
+                        font-weight: 500;
+                    }
+                }
                 p{
                     margin: 0;
                     font-size: 0.8rem;

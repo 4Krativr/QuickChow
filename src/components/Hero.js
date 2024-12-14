@@ -1,6 +1,7 @@
 import '../styles/hero.scss'
 import '../styles/general-styles.scss'
 import 'animate.css';
+import Navbar from './Navbar';
 import heroimg from '../assets/hero-images/hero-food-img.png';
 import videoimg from '../assets/hero-images/video-icon-img.png';
 import customerProfile from '../assets/hero-images/user-profile.png';
@@ -10,8 +11,9 @@ import timerImg from "../assets/hero-images/timer-icon.png";
 function Hero(){
     return(
         //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
-        <div className="container col-xxl-12 py-2 container-box">
-            <div className="row flex-lg-row-reverse g-5 py-5 hero-box">
+        <div className="container-fluid col-xxl-12 py-2 container-box">
+             <Navbar />
+            <div className="container row flex-lg-row-reverse g-5 hero-box">
                 <div className="col-10 col-sm-8 col-lg-6 hero-food d-none d-lg-block">
                     <img src={heroimg} className="d-block  mx-lg-auto img-fluid" alt="food" width="700" height="500" loading="lazy"/>
                     <div className="floating-customer-div animate__animated animate__fadeInLeft">

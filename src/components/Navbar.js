@@ -22,7 +22,7 @@ function Navbar(){
 
 
     return(
-        <nav className={`nav navbar navbar-expand-lg fixed-top
+        <nav className={`nav navbar navbar-expand-lg container
         ${shadow ? "navbar-shadow" : ""}`}>
             <div className="container">
                 <a className="navbar-brand col-lg-3 me-0" href="#">
@@ -41,7 +41,7 @@ function Navbar(){
                         </h5>
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <ul className="navbar-nav col-lg-8 justify-content-lg-evenly">
+                    <ul className="navbar-nav col-lg-7 justify-content-lg-evenly">
                         <li className="nav-item dropdown services-dropdown">
                             <a className="nav-link active  dropdown-toggle" href="services" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                             <ul className="dropdown-menu">
@@ -60,8 +60,9 @@ function Navbar(){
                         <a className="nav-link active" aria-disabled="true" href='#'>Contact</a>
                         </li>
                     </ul>
-                    <div className="d-lg-flex col-lg-4 justify-content-lg-end d-none">
-                        <button className="nav-btn">Coming Soon</button>
+                    <div className="d-lg-flex nav-btn-div col-lg-5 justify-content-lg-end d-none">
+                        <button className="nav-btn-login">Log in</button>
+                        <button className="nav-btn-signup">Sign Up</button>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,13 @@ import leftArrow from '../assets/main-images/left-arrow.png';
 import rightArrow from '../assets/main-images/right-arrow.png';
 import appleStore from '../assets/download-images/apple-icon.png';
 import playStore from '../assets/download-images/playstore-icon.png';
+import leaf from '../assets/reviewImages/leaf-img.png';
+import onion from '../assets/reviewImages/onion.svg';
 import rightLink from '../assets/main-images/right-arrow-link.png';
+import customer1 from '../assets/reviewImages/customer.svg';
+import customer2 from '../assets/reviewImages/customer-2.svg';
+import customer3 from '../assets/reviewImages/Ellipse 8.svg';
+
 
 
 //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
@@ -132,6 +138,27 @@ function Main(){
                 <div className="row g-5 py-5 reviews-box">
                     <div className="col-lg-6 reviews-img-div">
                         <img src={reviewsImg} className="reviews-img" alt="quickchow review" loading="lazy"/>
+                        <div className="floating-leaf">
+                            <img src={leaf} alt="a leaf" />
+                        </div>
+                        <div className="floating-leaf-2">
+                            <img src={leaf} alt="a leaf" />
+                        </div>
+                        <div className="floating-onion">
+                            <img src={onion} alt="An onion image" />
+                        </div>
+                        <div className="floating-onion-2">
+                            <img src={onion} alt="An onion image" />
+                        </div>
+                        <div className="customer-count">
+                            <h1>Our Reviews</h1>
+                            <div className='customers'>
+                                <img src= {customer1} alt="A customer"/>
+                                <img src= {customer2} alt="A customer" className='left'/>
+                                <img src= {customer3} alt="A customer" className='left'/>
+                                <div className="count-customers left">12k+</div>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-lg-6 reviews-content">
                         <div className="reviews-title">
@@ -167,15 +194,21 @@ function Main(){
                         <p className="mb-4">Coming soon!!</p>
                         <div className="gap-3 d-md-flex justify-content-md-start download-btn">
                             <a href="https://play.google.com/store/" target='_black'>
-                                <div>
+                                <div className='download-container'>
                                     <img src={playStore} alt="Playstore Icon" />
-                                    <p>Google Play</p>
+                                    <div className="download-text">
+                                        <p>Get it on</p>
+                                        <h5>Google Play</h5>
+                                    </div>
                                 </div>
                             </a>
                             <a href="https://www.apple.com/app-store/" target='_black'>
-                                <div>
+                                <div className='download-container'>
                                     <img src={appleStore} alt="Apple icon"/>
-                                    <p>App Store</p>
+                                    <div className="download-text">
+                                        <p>Download on the</p>
+                                        <h5>App Store</h5>
+                                    </div>
                                 </div>
                             </a>
                         </div>
