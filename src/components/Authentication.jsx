@@ -1,17 +1,13 @@
 import '../styles/login.css';
 import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
 
 
 
 const AuthForm = () => {
 
-  // const navigate = useNavigate();
-
  // code block for the form validation
  function FormValidate(){
   const userInput = document.querySelectorAll('input')
-  // const emailCheck = document.getElementById('email')
   userInput.forEach((inputBox) => {
     inputBox.addEventListener('blur', ()=>{
        if (inputBox.value === "") {
@@ -19,7 +15,6 @@ const AuthForm = () => {
        }
        else{
         inputBox.style.border = '1px solid green'
-        // navigate('/src/components/Main.js')
        }
     })
 
