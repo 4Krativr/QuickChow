@@ -1,10 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import quickchowLogo from '../assets/quick-chow-logo.png';
 import React, { useState, useEffect } from "react";
 import '../styles/general-styles.scss'
 import '../styles/navbar.scss';
+import { useNavigate } from 'react-router-dom';
+
 function Navbar(){
     //This javascript code activates the box shadow for the navbar when it scrolls past 50px vertically.
     //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
+    const navigate = useNavigate()
+
     const [shadow, setShadow] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
@@ -61,8 +66,10 @@ function Navbar(){
                         </li>
                     </ul>
                     <div className="d-lg-flex nav-btn-div col-lg-5 justify-content-lg-end d-none">
-                        <button className="nav-btn-login">Log in</button>
-                        <button className="nav-btn-signup">Sign Up</button>
+                       <a href="">
+                            <button className="nav-btn-login" onClick={() => navigate('authentication')}>Log in</button>
+                       </a>
+                        <button className="nav-btn-signup" onClick={() => navigate('authentication')}>Sign Up</button>
                     </div>
                 </div>
             </div>
