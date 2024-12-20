@@ -10,25 +10,24 @@ function Navbar(){
     //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
     const navigate = useNavigate()
 
-    const [shadow, setShadow] = useState(false);
-    useEffect(() => {
-        const handleScroll = () => {
-            if(window.scrollY > 50){
-                setShadow(true);
-            }else{
-                setShadow(false);
-            }
-        }
+    // const [shadow, setShadow] = useState(false);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if(window.scrollY > 50){
+    //             setShadow(true);
+    //         }else{
+    //             setShadow(false);
+    //         }
+    //     }
 
-        window.addEventListener('scroll', handleScroll)
+    //     window.addEventListener('scroll', handleScroll)
 
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, []);
 
 
     return(
-        <nav className={`nav navbar navbar-expand-lg container
-        ${shadow ? "navbar-shadow" : ""}`}>
+        <nav className='nav navbar navbar-expand-lg container'>
             <div className="container">
                 <a className="navbar-brand col-lg-3 me-0" href="#">
                         <img src={quickchowLogo} alt="QuickChow logo" className= "quick-chow-logo"/>
@@ -69,7 +68,7 @@ function Navbar(){
                        <a href="">
                             <button className="nav-btn-login" onClick={() => navigate('authentication')}>Log in</button>
                        </a>
-                        <button className="nav-btn-signup" onClick={() => navigate('authentication')}>Sign Up</button>
+                        <button className="nav-btn-signup" onClick={() => navigate('signup')}>Sign Up</button>
                     </div>
                 </div>
             </div>

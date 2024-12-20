@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AuthForm from './components/Authentication.jsx';
-import React from 'react';
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import Login from './components/Login.js';
+import Signup from './components/Signup.js';
 import { LandingPage } from "./components/LandingPage.jsx";
 
 function App(){
@@ -11,8 +11,11 @@ function App(){
 
           {/* landingPage contains the import of the navbar, hero, main and footer components and the AuthForm is the component for the sign in and sign up */}
           <Route path="/QuickChow" element={<LandingPage />} />
-          <Route path='/QuickChow/authentication' element={<AuthForm />} />
-          <Route path="*" element={<div>Page Not Found</div>} />
+          <Route path='/QuickChow/Login' element={<Login />} />
+          <Route path='/QuickChow/signup' element={<Signup />} />
+          <Route path='/QuickChow/Login/signup' element={<Signup />} />
+          <Route path='/QuickChow/signup/Login' element={<Login />} />
+          <Route path="*" element={<Navigate to='/QuickChow/Login' replace />} />
 
         </Routes>
 

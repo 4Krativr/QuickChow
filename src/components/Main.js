@@ -1,6 +1,6 @@
 import '../styles/main.scss';
 import { customerReview } from '../data/customerData';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import '../styles/general-styles.scss';
 import 'animate.css';
 import womanOrder from '../assets/main-images/order-food-img.svg';
