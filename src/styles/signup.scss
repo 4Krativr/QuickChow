@@ -1,0 +1,187 @@
+$poppins: "Poppins", sans-serif;
+$pink: #FACBCD;
+$lato: "Lato", sans-serif;
+$red: #D22D33;
+.main-signup{
+    background-color: $pink;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    .floating-img-1{
+        position: absolute;
+        left: -301px;
+        top: 401px;
+        z-index: 1;
+        img{
+            width: 503px;
+        }
+    }
+    .floating-img-2{
+        position: absolute;
+        right: 0;
+        top: 1040px;
+        z-index: 1;
+        img{
+            width: 204px;
+
+        }
+    }
+    .floating-img-3{
+        position: absolute;
+        top: -160px;
+        right: 50px;
+        z-index: 1;
+        img{
+            width: 435px;
+        }
+    }
+    .main-body{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: relative;
+        *{
+            z-index: 10;
+        }
+        .quickchow-logo{
+            display: inline;
+            margin-bottom: 30px;
+            margin-left: 150px;
+            img{
+                width: 200px;
+            }
+        }
+        .form-input{
+            background-color: white;
+            padding: 66px 150px;
+            border-radius: 10px;
+            width: 1000px;
+            align-self: center;
+            h2{
+                font-family: $lato;
+                font-weight: 700;
+            }
+            .lead-text{
+                width: 500px;
+                line-height: 30px;
+                font-family: $poppins;
+            }
+            .user-input{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                margin-top: 50px;
+                .input-elem{
+                    width: 100%;
+                    height: 70px;
+                    border-radius: 10px;
+                    background-color: #f4f4f4;
+                    border: none;
+                    margin-top: 5px;
+                    padding-left: 20px;
+                    outline: none;
+                    .selector-span{
+                        color: red !important;
+                        font-size: 2rem;
+                    }
+                }
+                .input-elem:focus{
+                    border: 1px solid $red;
+                }
+                label{
+                    font-family: $poppins;
+                    display: block;
+                }
+                .isStudent{
+                    h2{
+                        font-size: 1.2rem;
+                        margin-bottom: 20px;
+                    }
+                    div{
+                        display: flex;
+                        gap: 20px;
+                    }
+                    input{
+                        margin-right: 5px;
+                    }
+                }
+                .password-label{
+                    position: relative;
+                    img{
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                        width: 24px;
+                        cursor: pointer;
+                        // filter: invert(28%) sepia(63%) saturate(2564%) hue-rotate(337deg) brightness(83%) contrast(99%);
+                    }
+                }
+            }
+        }
+        .sign-up{
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+            flex-direction: column;
+            gap: 20px;
+            button{
+                padding: 15px 60px;
+                background-color: $red;
+                color: white;
+                border: none;
+                font-weight: 600;
+                border-radius: 50px;
+            }
+            a{
+                text-decoration: none;
+                color: $red;
+            }
+        }
+    }
+}
+@media (max-width: 576px){
+    .main-signup{
+        .floating-img-3{
+            top: -131px;
+            left: 200px;
+            img{
+                width: 202px;
+                height: 196px;
+            }
+        }
+        .floating-img-1{
+            top: 398px;
+            left: -121px;
+            img{
+                width: 203px;
+                height: 304px;
+            }
+        }
+        .floating-img-2{
+            top: 337px;
+            right: 0;
+            img{
+                width: 104px;
+            }
+        }
+        .main-body{
+            width: 100%;
+            .form-input{
+                width: 100%;
+                padding: 20px 30px;
+            }
+            .lead-text{
+                width: 100%!important;
+                font-size: 0.9rem;
+            }
+            .quickchow-logo{
+                text-align: left;
+                margin-left: 0;
+                img{
+                    width: 171px;
+                }
+            }
+        }
+    }
+}
+

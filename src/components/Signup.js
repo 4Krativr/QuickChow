@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate, Link} from 'react-router-dom'
-import '../styles/login.scss';
+import '../styles/signup.scss';
 import quickchow from '../assets/quick-chow-logo.png';
 import img1 from '../assets/Login:Signup-assets/floating-img-1.png';
-import img2 from '../assets/Login:Signup-assets/floating-img-2.png';
+import img2 from '../assets/Login:Signup-assets/floating-img-2.svg';
 import img3 from '../assets/Login:Signup-assets/floating-img-3.png';
 import password from '../assets/Login:Signup-assets/show-password.svg';
 
@@ -24,14 +24,13 @@ function FormValidate(){
 
 function Login(){
     const [passwordImg, setPasswordImg] = useState(password);
-    const navigate = useNavigate();
     return(
         <main className='main-signup'>
             <div className="main-body">
                 <div className="quickchow-logo">
                     <img src={quickchow} alt="quickchow logo" />
                 </div>
-                <form action="./Main.js" method="post" id='signUp'>
+                <form action="./Main.js" method="post" id='signUp' className='form-input'>
                 <section>
                     <h2>Create a customer account</h2>
                     <p className='lead-text'>

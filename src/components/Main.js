@@ -97,7 +97,7 @@ function Main(){
                     <h4>WHAT WE SERVE</h4>
                     <h1>Your Favourite Food Delivery Partner</h1>
                 </div>
-                <div className="row g-5 py-5 row-cols-1 row-cols-lg-3 mt-3 services-content">
+                <div className="row py-5 mt-3 services-content">
                     <div className="feature col">
                         <img src={womanOrder} alt="delivery" className='service-img'/>
                         <h3 className="fs-3 text-body-emphasis">Easy To Order</h3>

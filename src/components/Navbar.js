@@ -64,7 +64,7 @@ function Navbar(){
                         <a className="nav-link active" aria-disabled="true" href='#'>Contact</a>
                         </li>
                     </ul>
-                    <div className="d-lg-flex nav-btn-div col-lg-5 justify-content-lg-end d-none">
+                    <div className="d-lg-flex nav-btn-div col-lg-5 justify-content-lg-end">
                        <a href="">
                             <button className="nav-btn-login" onClick={() => navigate('authentication')}>Log in</button>
                        </a>

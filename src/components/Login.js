@@ -1,6 +1,6 @@
-import '../styles/login.scss';
-import styles from '../styles/login.scss';
-import {  Link } from 'react-router-dom'
+import '../styles/signup.scss';
+import {  Link } from 'react-router-dom';
+import quickchow from '../assets/quick-chow-logo.png';
 
 const Login = () => {
 
@@ -21,27 +21,37 @@ const Login = () => {
 
  return(
   <>
-    <form action="" method="post" id='signIn'>
+  <main className="main-signup">
+    <div className="main-body">
+      <div className="quickchow-logo">
+          <img src={quickchow} alt="quickchow logo" />
+      </div>
+      <form action="" method="post" id='signIn' className='form-input'>
+        <section>
+        <h2>Login</h2>
+        <p>Welcome back! Please login to your account</p>
+        </section>
 
-      <section>
-      <h2>Sign In</h2>
-      <span>Log in to continue</span>
-      </section>
+        <section className='user-input'>
+          <label htmlFor="email">Email Address
+            <input className='input-elem' type="email" id='email' required/>
+          </label>
+          <label htmlFor="password">Password
+            <input className='input-elem' type="password" id='password' required/>
+          </label>
+        </section>
 
-      <section>
-        <label htmlFor="telephponeNumber">Mobile Number</label>
-        <input type="text" id='telephponeNumber' required/>
-      </section>
-
-      <section>
-        <button onClick={FormValidate}>Login</button>
-        <span>New User? 
-          <Link to = 'signup'>
-            Sign up
-          </Link>
-        </span>
-      </section>
-    </form>      
+        <section className='sign-up'>
+          <button onClick={FormValidate}>Login</button>
+          <span>New User?  
+            <Link to = 'signup'>
+              Sign up
+            </Link>
+          </span>
+        </section>
+      </form>   
+    </div>
+  </main>  
   </>
  );
 }
