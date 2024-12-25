@@ -67,9 +67,9 @@ function Navbar(){
                     </ul>
                     <div className="d-lg-flex nav-btn-div col-lg-5 justify-content-lg-end d-none">
                        <a href="">
-                            <button className="nav-btn-login" onClick={() => navigate('authentication')}>Log in</button>
+                            <button className="nav-btn-login" onClick={() => navigate('/authentication')}>Log in</button>
                        </a>
-                        <button className="nav-btn-signup" onClick={() => navigate('authentication')}>Sign Up</button>
+                        <button className="nav-btn-signup" onClick={() => navigate('/authentication')}>Sign Up</button>
                     </div>
                 </div>
             </div>
