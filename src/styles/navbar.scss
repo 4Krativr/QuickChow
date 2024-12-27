@@ -78,4 +78,9 @@ nav{
             margin-left: 15px;
         }
     }
+    .nav-btn-div{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
 }

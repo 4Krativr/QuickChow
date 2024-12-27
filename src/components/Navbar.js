@@ -38,7 +38,7 @@ function Navbar(){
                 <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="offcanvas offcanvas-end d-flex flex-column flex-lg-row" tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                <div className="offcanvas offcanvas-end d-flex flex-column flex-lg-row px-3" tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
                     <div className="offcanvas-header">
                         <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                             <img src={quickchowLogo} alt="QuickChow logo" className= "quick-chow-logo"/>

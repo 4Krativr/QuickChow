@@ -101,13 +101,13 @@ function Login(){
                 </form>
             </div>
             <div className="floating-img-1">
-                    <img src={img1} alt="food" />
-                </div>
-                <div className="floating-img-2">
-                    <img src={img2} alt="food" />
-                </div>
-                <div className="floating-img-3">
-                    <img src={img3} alt="food" />
+                <img src={img1} alt="food" />
+            </div>
+            <div className="floating-img-2">
+                <img src={img2} alt="food" />
+            </div>
+            <div className="floating-img-3">
+                <img src={img3} alt="food" />
             </div>
       </main>
     )

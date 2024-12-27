@@ -1,6 +1,9 @@
 import '../styles/signup.scss';
 import {  Link } from 'react-router-dom';
 import quickchow from '../assets/quick-chow-logo.png';
+import img1 from '../assets/Login:Signup-assets/floating-img-1.png';
+import img2 from '../assets/Login:Signup-assets/floating-img-2.svg';
+import img3 from '../assets/Login:Signup-assets/floating-img-3.png';
 
 const Login = () => {
 
@@ -21,7 +24,7 @@ const Login = () => {
 
  return(
   <>
-  <main className="main-signup">
+  <main className="main-signup main-login">
     <div className="main-body">
       <div className="quickchow-logo">
           <img src={quickchow} alt="quickchow logo" />
@@ -49,8 +52,17 @@ const Login = () => {
             </Link>
           </span>
         </section>
-      </form>   
+      </form>  
     </div>
+    <div className="floating-img-1">
+          <img src={img1} alt="food" />
+      </div>
+      <div className="floating-img-2">
+          <img src={img2} alt="food" />
+      </div>
+      <div className="floating-img-3">
+          <img src={img3} alt="food" />
+      </div> 
   </main>  
   </>
  );
