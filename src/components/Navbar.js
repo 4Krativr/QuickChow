@@ -10,24 +10,25 @@ function Navbar(){
     //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
     const navigate = useNavigate()
 
-    // const [shadow, setShadow] = useState(false);
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         if(window.scrollY > 50){
-    //             setShadow(true);
-    //         }else{
-    //             setShadow(false);
-    //         }
-    //     }
+    const [shadow, setShadow] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            if(window.scrollY > 50){
+                setShadow(true);
+            }else{
+                setShadow(false);
+            }
+        }
 
-    //     window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll)
 
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // }, []);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
 
     return(
-        <nav className='nav navbar navbar-expand-lg container'>
+        <nav className={`nav navbar navbar-expand-lg container
+        ${shadow ? "navbar-shadow" : ""}`}>
             <div className="container">
                 <a className="navbar-brand col-lg-3 me-0" href="#">
                         <img src={quickchowLogo} alt="QuickChow logo" className= "quick-chow-logo"/>
@@ -38,7 +39,7 @@ function Navbar(){
                 <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="offcanvas offcanvas-end d-flex flex-column flex-lg-row px-3" tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                <div className="offcanvas offcanvas-end d-flex flex-column flex-lg-row" tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
                     <div className="offcanvas-header">
                         <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                             <img src={quickchowLogo} alt="QuickChow logo" className= "quick-chow-logo"/>
