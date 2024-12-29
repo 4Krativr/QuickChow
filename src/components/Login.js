@@ -1,5 +1,6 @@
 import '../styles/signup.scss';
-import {  Link } from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
+import { useEffect } from 'react';
 import quickchow from '../assets/quick-chow-logo.png';
 import img1 from '../assets/Login:Signup-assets/floating-img-1.png';
 import img2 from '../assets/Login:Signup-assets/floating-img-2.svg';
@@ -21,6 +22,11 @@ const Login = () => {
     })
   })
  }
+ //This block of code removes the "overflow: hidden" style which prevents the webpage to scroll horizontally or vertically
+ const location = useLocation();
+    useEffect(() => {
+      document.body.style.overflow = ''; // Reset on route change
+    }, [location]);
 
  return(
   <>

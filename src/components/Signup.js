@@ -1,11 +1,12 @@
-import { useState } from 'react';
-import { useNavigate, Link} from 'react-router-dom'
+import { useEffect } from 'react';
+import { useLocation, Link} from 'react-router-dom'
 import '../styles/signup.scss';
 import quickchow from '../assets/quick-chow-logo.png';
 import img1 from '../assets/Login:Signup-assets/floating-img-1.png';
 import img2 from '../assets/Login:Signup-assets/floating-img-2.svg';
 import img3 from '../assets/Login:Signup-assets/floating-img-3.png';
 import password from '../assets/Login:Signup-assets/show-password.svg';
+
 
 function FormValidate(){
     const userInput = document.querySelectorAll('input');
@@ -23,7 +24,11 @@ function FormValidate(){
 }
 
 function Login(){
-    const [passwordImg, setPasswordImg] = useState(password);
+     //This block of code removes the "overflow: hidden" style which prevents the webpage to scroll horizontally or vertically
+    const location = useLocation();
+    useEffect(() => {
+        document.body.style.overflow = ''; // Reset on route change
+      }, [location]);
     return(
         <main className='main-signup'>
             <div className="main-body">
@@ -85,11 +90,11 @@ function Login(){
                         </select>
                     </label>
                     <label htmlFor="password" className='password-label'>Password
-                    <img src={passwordImg} alt="show-password" className='js-reveal-password'/>
+                    <img src={password} alt="show-password" className='js-reveal-password'/>
                     <input type="password" id="password" className='input-elem' required/>
                     </label>
                     <label htmlFor="password" className='password-label'>Confirm Password
-                    <img src={passwordImg} alt="show-password" className='js-reveal-password'/>
+                    <img src={password} alt="show-password" className='js-reveal-password'/>
                     <input type="password" id="validPassword" className='input-elem' required/>
                     </label>
                 </section>
