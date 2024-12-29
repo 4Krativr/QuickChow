@@ -1,14 +1,11 @@
 {
   "files": {
-    "main.css": "/QuickChow/static/css/main.04441262.css",
-    "main.js": "/QuickChow/static/js/main.6a5bcb08.js",
-    "static/media/floating-img-2.svg": "/QuickChow/static/media/floating-img-2.0198305f89670831a14cf02e7c8d4da9.svg",
-    "static/media/floating-img-1.png": "/QuickChow/static/media/floating-img-1.cadf30c4d2024f3e4857.png",
+    "main.css": "/QuickChow/static/css/main.a7191085.css",
+    "main.js": "/QuickChow/static/js/main.13421414.js",
     "static/media/order-food-img.svg": "/QuickChow/static/media/order-food-img.e3ec7ab640a602f707c651cee17dcd0e.svg",
     "static/media/delivery-img.svg": "/QuickChow/static/media/delivery-img.85f88930c0345156feb7028f8a9f9bf5.svg",
     "static/media/good-quality-img.svg": "/QuickChow/static/media/good-quality-img.77edc1a8b4ed035c1c4684d6e3add109.svg",
     "static/media/hero-food-img.png": "/QuickChow/static/media/hero-food-img.506dc0601cad49c67154.png",
-    "static/media/floating-img-3.png": "/QuickChow/static/media/floating-img-3.355a63c77364145db8bb.png",
     "static/media/PH.png": "/QuickChow/static/media/PH.d451002994dd5215cdba.png",
     "static/media/chef-img.png": "/QuickChow/static/media/chef-img.1c43090c91192a38c6fe.png",
     "static/media/onion.svg": "/QuickChow/static/media/onion.311e5f9b06f9497474e25519ff6a8e82.svg",
@@ -18,12 +15,11 @@
     "static/media/quick-chow-logo.png": "/QuickChow/static/media/quick-chow-logo.02aadda2336e4d060a6e.png",
     "static/media/leaf-img.png": "/QuickChow/static/media/leaf-img.4e98511aa38ff73c66c5.png",
     "index.html": "/QuickChow/index.html",
-    "static/media/show-password.svg": "/QuickChow/static/media/show-password.551fd6af3fb69ab8aee34239827b3c0c.svg",
-    "main.04441262.css.map": "/QuickChow/static/css/main.04441262.css.map",
-    "main.6a5bcb08.js.map": "/QuickChow/static/js/main.6a5bcb08.js.map"
+    "main.a7191085.css.map": "/QuickChow/static/css/main.a7191085.css.map",
+    "main.13421414.js.map": "/QuickChow/static/js/main.13421414.js.map"
   },
   "entrypoints": [
-    "static/css/main.04441262.css",
-    "static/js/main.6a5bcb08.js"
+    "static/css/main.a7191085.css",
+    "static/js/main.13421414.js"
   ]
 }
