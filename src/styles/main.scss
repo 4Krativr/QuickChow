@@ -102,16 +102,18 @@ main{
             top: 0;
             right: 150px;
             transform: rotate(-50deg);
+            width: 105px;
             img{
-                width: 105px;
+                width: 100%;
             }
         }
         .floating-leaf-2{
             position: absolute;
             top: 0;
             right: 90px;
+            width: 147px;
             img{
-                width: 147px;
+                width: 100%;
             }
         }
         .floating-onion{
@@ -131,7 +133,11 @@ main{
             right: 30px;
             background-color: white;
             border-radius: 10px;
-            padding: 20px 40px;
+            width: 263px;
+            height: 161px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             h1{
                 font-family: Lato, 'sans-serif';
                 color: black;
@@ -144,6 +150,7 @@ main{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                width: 100%;
                 .left{
                     margin-left: -20px;
                 }
@@ -389,7 +396,7 @@ main{
             }
             .reviews-box{
                 width: 100%;
-                gap: 50px;
+                gap: 180px;
                 .reviews-img{
                     width: 100% !important;
                 }
@@ -410,10 +417,41 @@ main{
                     }
                 }
             }
+            .floating-leaf{
+                width: 80px !important;
+                top: 2933px;
+                left: 220px
+            }
+            .floating-leaf-2{
+                width: 100px !important;
+                left: 240px;
+            }
+            .floating-onion{
+                img{
+                    width: 80px;
+                }
+                left: 10px !important;
+            }
+            .floating-onion-2{
+                img{
+                    width: 80px;
+                }
+                left: 30px !important;
+            }
+            .customer-count{
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                top: 350px;
+                left: 120px;
+                width: 230px !important;
+                height: 150px !important;
+                padding: 12px 16px;
+                border-radius: 20px !important;
+            }
         }
 
         .download{
             padding: 50px 30px;
+            height: 850px;
             .download-content{
                 padding: 0px 15px;
                 .download-content-text{
@@ -430,7 +468,10 @@ main{
                 }
             }
             .download-img{
-                display: none;
+                width: 90%;
+                height:45vh;
+                left: 20px;
+                // background-size: 100% 100%;
             }
         }
     }
