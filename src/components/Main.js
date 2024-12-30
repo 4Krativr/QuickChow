@@ -47,14 +47,14 @@ function Main(){
                 </p>
                 <div class="customer-reviews">
                     <div class="customer-reviews-content">
-                        <img src=${reviews.profilePic} alt="A customer profile" loading= "lazy"/>
+                        <img src=${reviews.profilePic} alt="A customer profile" />
                         <div>
                             <h6>${reviews.name}</h6>
                             <p>${reviews.class}</p>
                         </div>
                     </div>
                     <div class="star-rating">
-                    <img src=${reviews.star} alt='star rating' loading= "lazy"/>
+                    <img src=${reviews.star} alt='star rating'/>
                         <p>4.8</p>
                     </div>
                 </div>
@@ -99,36 +99,36 @@ function Main(){
                 </div>
                 <div className="row g-5 py-5 row-cols-1 row-cols-lg-3 mt-3 services-content">
                     <div className="feature col">
-                        <img src={womanOrder} alt="delivery" className='service-img' loading="lazy"/>
+                        <img src={womanOrder} alt="delivery" className='service-img'/>
                         <h3 className="fs-3 text-body-emphasis">Easy To Order</h3>
                         <p>
                             It only takes a few steps to order delicious meals from our mobile app.
                         </p>
                         <a href="">
                             Get Started
-                            <img src={rightLink} alt="arrow link" className='right-arrow-link' loading= "lazy"/>
+                            <img src={rightLink} alt="arrow link" className='right-arrow-link'/>
                         </a>
                     </div>
                     <div className="feature col">    
-                        <img src={riders} alt="delivery" className='service-img' loading="lazy" />
+                        <img src={riders} alt="delivery" className='service-img'/>
                         <h3 className="fs-3 text-body-emphasis">Fast Delivery</h3>
                         <p>
                         Experience lightning-fast delivery that brings your favorite meals to your doorstep in no time.
                         </p>
                         <a href="">
                             Get Started
-                            <img src={rightLink} alt="arrow link" className='right-arrow-link' loading= "lazy"/>
+                            <img src={rightLink} alt="arrow link" className='right-arrow-link'/>
                         </a>
                     </div>
                     <div className="feature col">
-                        <img src={waiters} alt="delivery" className='service-img' loading="lazy"/>
+                        <img src={waiters} alt="delivery" className='service-img'/>
                         <h3 className="fs-3 text-body-emphasis">Best Quality</h3>
                         <p>
                         Savor every bite with top-quality food, made from the freshest ingredients.
                         </p>
                         <a href="">
                             Get Started
-                            <img src={rightLink} alt="arrow link" className='right-arrow-link' loading= "lazy"/>
+                            <img src={rightLink} alt="arrow link" className='right-arrow-link'/>
                         </a>
                     </div>
                 </div>
@@ -139,23 +139,23 @@ function Main(){
                     <div className="col-lg-6 reviews-img-div">
                         <img src={reviewsImg} className="reviews-img" alt="quickchow review" loading="lazy"/>
                         <div className="floating-leaf">
-                            <img src={leaf} alt="a leaf" loading= "lazy"/>
+                            <img src={leaf} alt="a leaf" />
                         </div>
                         <div className="floating-leaf-2">
-                            <img src={leaf} alt="a leaf" loading= "lazy"/>
+                            <img src={leaf} alt="a leaf" />
                         </div>
                         <div className="floating-onion">
-                            <img src={onion} alt="An onion image" loading= "lazy"/>
+                            <img src={onion} alt="An onion image" />
                         </div>
                         <div className="floating-onion-2">
-                            <img src={onion} alt="An onion image" loading= "lazy"/>
+                            <img src={onion} alt="An onion image" />
                         </div>
                         <div className="customer-count">
                             <h1>Our Reviews</h1>
                             <div className='customers'>
-                                <img src= {customer1} alt="A customer" loading="lazy"/>
-                                <img src= {customer2} alt="A customer" className='left' loading="lazy"/>
-                                <img src= {customer3} alt="A customer" className='left' loading="lazy"/>
+                                <img src= {customer1} alt="A customer"/>
+                                <img src= {customer2} alt="A customer" className='left'/>
+                                <img src= {customer3} alt="A customer" className='left'/>
                                 <div className="count-customers left">12k+</div>
                             </div>
                         </div>
@@ -165,10 +165,10 @@ function Main(){
                             <h4>WHAT THEY SAY</h4>
                             <div className="reviews-title-arrows">
                                 <div className="left-arrow js-left-arrow">
-                                    <img src={leftArrow} alt="left arrow icon" loading= "lazy"/>
+                                    <img src={leftArrow} alt="left arrow icon" />
                                 </div>
                                 <div className="right-arrow js-right-arrow">
-                                    <img src={rightArrow} alt="right arrow icon" loading= "lazy"/>
+                                    <img src={rightArrow} alt="right arrow icon" />
                                 </div>
                             </div>
                         </div>
@@ -195,7 +195,7 @@ function Main(){
                         <div className="gap-3 d-md-flex justify-content-md-start download-btn">
                             <a href="https://play.google.com/store/" target='_black'>
                                 <div className='download-container'>
-                                    <img src={playStore} alt="Playstore Icon" loading="lazy" />
+                                    <img src={playStore} alt="Playstore Icon" />
                                     <div className="download-text">
                                         <p>Get it on</p>
                                         <h5>Google Play</h5>
@@ -204,7 +204,7 @@ function Main(){
                             </a>
                             <a href="https://www.apple.com/app-store/" target='_black'>
                                 <div className='download-container'>
-                                    <img src={appleStore} alt="Apple icon" loading="lazy"/>
+                                    <img src={appleStore} alt="Apple icon"/>
                                     <div className="download-text">
                                         <p>Download on the</p>
                                         <h5>App Store</h5>
