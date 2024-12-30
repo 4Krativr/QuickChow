@@ -3,9 +3,9 @@ import { useLocation, Link} from 'react-router-dom'
 import '../styles/signup.scss';
 import quickchow from '../assets/quick-chow-logo.png';
 import img1 from '../assets/Login:Signup-assets/floating-img-1.png';
-import img2 from '../assets/Login:Signup-assets/floating-img-2.svg';
-import img3 from '../assets/Login:Signup-assets/floating-img-3.png';
-import password from '../assets/Login:Signup-assets/show-password.svg';
+import img2 from '../assets/Login:Signup-assets/floating-img-2.png';
+import img3 from '../assets/Login:Signup-assets/flaoting-img-3.png';
+import password from '../assets/Login:Signup-assets/password-img.svg';
 
 
 function FormValidate(){
