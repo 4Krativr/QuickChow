@@ -1,11 +1,9 @@
 import '../styles/login.css';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import React, { useRef } from 'react'
 
 
 const AuthForm = () => {
-   const navigate = useNavigate();
    const formRef = useRef(null); //Refernce for the form
 
  // code block for the form validation
@@ -16,22 +14,16 @@ const AuthForm = () => {
     // Access all inputBoxes in the form
     const userInput = Array.from(formRef.current.querySelectorAll('input'));
     const firstFourInputs = userInput.slice(0, 4); // checks for the compulsory first four inputs if the input boxes have been filled
-    let isFirstFourFilled = true;
-
 
     firstFourInputs.forEach((inputBox) => {
       if (inputBox.value.trim() === "") {
         inputBox.style.border = '1px solid red';
-        isFirstFourFilled = false;
       } else {
         inputBox.style.border = '1px solid green';
         
       }
     });
 
-    if (isFirstFourFilled) {
-      navigate('/HomePage');
-    }
   };
 
 

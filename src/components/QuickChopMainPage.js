@@ -10,6 +10,8 @@ import instagram from "../assets/mainPage-images/instagram-icon.png"
 import twitter from '../assets/footer-images/twitter.png'
 import dropdownIcon from '../assets/mainPage-images/angle-down.svg'
 import location from '../assets/mainPage-images/location-point.svg'
+import menuBar from '../assets/mainPage-images/bars.svg'
+import { useState } from "react";
 
 
 function KitchenAndFood() {
@@ -36,6 +38,13 @@ function KitchenAndFood() {
 }
 
 function MainPage() {
+
+  const [menuBarVisible, setMenubarAction] = useState(false);
+
+  const toggleMenuBar = () => {
+    setMenubarAction(!menuBarVisible);
+  }
+
  return (
   <>
     <div class="mainHeader">
@@ -59,6 +68,26 @@ function MainPage() {
         <div className='location dropdown'>
           <img src={iconLogo} alt="logo" id="logo"/>
           <img src={dropdownIcon} className="iconSvg"  alt="angleDown" />
+          <div className="menubar">
+            <img src={menuBar} className="iconSvg2"  alt="menu-bar" onClick={toggleMenuBar}/>
+
+            <div style={{display: menuBarVisible ? 'block' : 'none'}} className="mobile-menuBar">
+            <li id="serviceList-mobile">
+              <div style={{display: 'flex', alignItems: 'center'}}>Services <img src={dropdownIcon} className="service dropdown" alt='dropdowm' /></div>
+              <div className="dropdownList-mobile">
+                <li>service</li>
+                <li>service</li>
+                <li>service</li>
+                <li>service</li>
+                <li>service</li>
+              </div>
+            </li>
+            <li>About us</li>
+            <li>Testimonials</li>
+            <li>Contact</li>
+            </div>          
+          </div>
+
         </div>
 
         
@@ -67,28 +96,30 @@ function MainPage() {
         <div id="groupItems">
         <span id="kitchenHeader">Kitchens Near You</span>
       <div id="orderInputs">
-          {/* <input type="text" placeholder="Select Kitchen"> */}
-              <select>
-                  <option value=''>Select Kitchen</option>
-                  <option value='option1'>--Kitchen Name--</option>
-                  <option value='option2'>--Kitchen Name--</option>
-                  <option value='option3'>--Kitchen Name--</option>
-                  <option value='option4'>--Kitchen Name--</option>
-                  
-              </select>
+              <div>
+                <select>
+                    <option value=''>Select Kitchen</option>
+                    <option value='option1'>--Kitchen Name--</option>
+                    <option value='option2'>--Kitchen Name--</option>
+                    <option value='option3'>--Kitchen Name--</option>
+                    <option value='option4'>--Kitchen Name--</option>
+                
+                </select>
+                <select>
+                    <option value=''>Food Type</option>
+                    <option value='option1'>--Food Type--</option>
+                    <option value='option2'>--Food Type--</option>
+                    <option value='option3'>--Food Type--</option>
+                    <option value='option4'>--Food Type--</option>
+                
+                </select>
+                
+              </div>
 
-              <select>
-                  <option value=''>Food Type</option>
-                  <option value='option1'>--Food Type--</option>
-                  <option value='option2'>--Food Type--</option>
-                  <option value='option3'>--Food Type--</option>
-                  <option value='option4'>--Food Type--</option>
-                  
-              </select>
-          {/* </input> */}
-          {/* <input type="text" placeholder="Food Type"></input> */}
-          <button>Search</button>
+              <button id="search-btn">Search</button>    
       </div>
+      
+
     </div>
       
       
