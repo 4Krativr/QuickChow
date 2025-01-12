@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import '../styles/hero.scss'
 import '../styles/general-styles.scss'
 import 'animate.css';
@@ -9,6 +10,9 @@ import phoneImg from "../assets/hero-images/phone-icon.png";
 import fireIcon from "../assets/hero-images/fire-icon.png"
 import timerImg from "../assets/hero-images/timer-icon.png";
 function Hero(){
+
+    const navigate = useNavigate();
+
     return(
         //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
         <div className="container-fluid col-xxl-12 py-2 container-box">
@@ -47,7 +51,7 @@ function Hero(){
                         Explore local restaurants and get food delivered fast and fresh. Our job is to satisfy your cravings with and fast and quality delivery.
                     </p>
                     <div className="d-grid gap-2 d-md-flex hero-btn">
-                    <button type="button" className="order-btn">
+                    <button type="button" className="order-btn" onClick={() => navigate('/HomePage')}>
                         Order Food
                     </button>
                     <div type="button" className="watch-video-btn">

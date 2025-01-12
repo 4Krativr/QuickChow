@@ -1,25 +1,31 @@
 import '../styles/login.css';
 import { useState } from 'react';
-
+import React, { useRef } from 'react'
 
 
 const AuthForm = () => {
+   const formRef = useRef(null); //Refernce for the form
 
  // code block for the form validation
- function FormValidate(){
-  const userInput = document.querySelectorAll('input')
-  userInput.forEach((inputBox) => {
-    inputBox.addEventListener('blur', ()=>{
-       if (inputBox.value === "") {
-        inputBox.style.border = '1px solid red'
-       }
-       else{
-        inputBox.style.border = '1px solid green'
-       }
-    })
 
-  })
- }
+ function FormValidate(event){
+  event.preventDefault();
+
+    // Access all inputBoxes in the form
+    const userInput = Array.from(formRef.current.querySelectorAll('input'));
+    const firstFourInputs = userInput.slice(0, 4); // checks for the compulsory first four inputs if the input boxes have been filled
+
+    firstFourInputs.forEach((inputBox) => {
+      if (inputBox.value.trim() === "") {
+        inputBox.style.border = '1px solid red';
+      } else {
+        inputBox.style.border = '1px solid green';
+        
+      }
+    });
+
+  };
+
 
 
  // code block for switching the forms
@@ -32,7 +38,7 @@ const AuthForm = () => {
  return(
   <>
     {isSignUp && (
-              <form action="./Main.js" method="post" className="AuthForm" id='signUp'>
+              <form action="" ref={formRef} method="post" className="AuthForm" id='signUp'>
               <section className="formHeader">
                <h2>Sign Up</h2>
                <span>Create an Account to continue</span>
@@ -58,7 +64,7 @@ const AuthForm = () => {
               </section>
               
               <section className="formFooter">
-                 <button className="formsubmit" onClick={FormValidate}>Sign Up </button>
+                 <button className="formsubmit" type='submit' onClick={FormValidate}>Sign Up </button>
                  <span>Already have an account? <a href="#" onClick={toggleForm}>Sign In</a></span>
               </section>
     
@@ -68,7 +74,7 @@ const AuthForm = () => {
     )}  
 
      {!isSignUp && (
-           <form action="" method="post" className='AuthForm' id='signIn'>
+           <form action="" ref={formRef} method="post" className='AuthForm' id='signIn'>
 
            <section className="formHeader">
             <h2>Sign In</h2>
@@ -81,7 +87,7 @@ const AuthForm = () => {
             </section>
       
             <section className="formFooter">
-                   <button className="formsubmit" onClick={FormValidate}>Sign in</button>
+                   <button className="formsubmit" type='submit' onClick={FormValidate} >Sign in</button>
                    <span>New User? <a href="#" onClick={toggleForm}>Sign Up</a></span>
                 </section>
       
