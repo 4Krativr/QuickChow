@@ -39,7 +39,7 @@ function Navbar(){
                 <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="offcanvas offcanvas-end d-flex flex-column flex-lg-row" tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                <div className="offcanvas offcanvas-end d-flex flex-column flex-lg-row px-3" tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
                     <div className="offcanvas-header">
                         <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                             <img src={quickchowLogo} alt="QuickChow logo" className= "quick-chow-logo"/>
@@ -65,11 +65,9 @@ function Navbar(){
                         <a className="nav-link active" aria-disabled="true" href='#'>Contact</a>
                         </li>
                     </ul>
-                    <div className="d-lg-flex nav-btn-div col-lg-5 justify-content-lg-end d-none">
-                       <a href="">
-                            <button className="nav-btn-login" onClick={() => navigate('/authentication')}>Log in</button>
-                       </a>
-                        <button className="nav-btn-signup" onClick={() => navigate('/authentication')}>Sign Up</button>
+                    <div className="d-lg-flex nav-btn-div col-lg-5 justify-content-lg-end">
+                        <button className="nav-btn-login" onClick={() => navigate('authentication')}>Log in</button>
+                        <button className="nav-btn-signup" onClick={() => navigate('signup')}>Sign Up</button>
                     </div>
                 </div>
             </div>
