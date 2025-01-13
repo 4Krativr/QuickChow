@@ -1,4 +1,4 @@
-import '../styles/main.scss';
+import '../styles/LandingPage-styles/main.scss';
 import { customerReview } from '../data/customerData';
 import { useEffect, useState } from 'react';
 import '../styles/general-styles.scss';

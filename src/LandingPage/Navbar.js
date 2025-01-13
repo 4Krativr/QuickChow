@@ -2,7 +2,7 @@
 import quickchowLogo from '../assets/quick-chow-logo.png';
 import React, { useState, useEffect } from "react";
 import '../styles/general-styles.scss'
-import '../styles/navbar.scss';
+import '../styles/LandingPage-styles/navbar.scss';
 import { useNavigate } from 'react-router-dom';
 
 function Navbar(){

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import '../styles/hero.scss'
+import '../styles/LandingPage-styles/hero.scss'
 import '../styles/general-styles.scss'
 import 'animate.css';
 import Navbar from './Navbar';
@@ -51,7 +51,7 @@ function Hero(){
                         Explore local restaurants and get food delivered fast and fresh. Our job is to satisfy your cravings with and fast and quality delivery.
                     </p>
                     <div className="d-grid gap-2 d-md-flex hero-btn">
-                    <button type="button" className="order-btn" onClick={() => navigate('/HomePage')}>
+                    <button type="button" className="order-btn" onClick={() => navigate('HomePage')}>
                         Order Food
                     </button>
                     <div type="button" className="watch-video-btn">

@@ -3,7 +3,7 @@ import instagram from '../assets/footer-images/bx_bxl-instagram-alt.png';
 import facebook from '../assets/footer-images/facebook.png';
 import twitter from '../assets/footer-images/twitter.png';
 import sendIcon from '../assets/footer-images/send-icon.png';
-import '../styles/footer.scss';
+import '../styles/LandingPage-styles/footer.scss';
 function Footer(){
     //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
     return(
