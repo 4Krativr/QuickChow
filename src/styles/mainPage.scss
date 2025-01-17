@@ -1,3 +1,7 @@
+// please navigate with caution
+// regardless of whether some lines of code are in use or not, dont not try to make changes to the code without first contacting the devloper
+// You may proceed with caution
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 $buttonBgColor: #D22D33;
 $footerColor: #FACBCD;
@@ -119,18 +123,18 @@ $footerColor: #FACBCD;
           // display: none;
           background-color: white;
           position: absolute;
-          right: 1rem;
-          top: 3rem;
+          right: 2rem;
+          top: 4.5rem;
           width: 7rem;
       
           li{
             list-style: none;
             padding: 0.5rem;
       
-            &:hover{
-              background-color: aqua;
-              box-shadow: 1px 1px 3px grey;
-            }
+            // &:hover{
+            //   background-color: aqua;
+            //   box-shadow: 1px 1px 3px grey;
+            // }
           }
           #serviceList-mobile{
       
@@ -145,10 +149,10 @@ $footerColor: #FACBCD;
                 color: black;
               }
             }
-            &:hover .dropdownList-mobile{
-              display: block
+            // &:hover .dropdownList-mobile{
+            //   display: block
             
-            }
+            // }
           }
         }
       }
@@ -176,16 +180,18 @@ $footerColor: #FACBCD;
 
    select{
     height: 3rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1.5rem;
     border: none;
     border-radius: 5px;
     margin-right: 1rem;
+    // appearance: none;
+
    }
    input:focus{
     outline: none;
    }
    #search-btn{
-    @include buttons(1rem, 7rem);
+    @include buttons(0.7rem, 8rem);
     // display: inline;
    }
 
@@ -206,8 +212,8 @@ $footerColor: #FACBCD;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  grid-column-gap: 20px;
-  grid-row-gap: 40px;
+  grid-column-gap: 40px;
+  grid-row-gap: 60px;
 
  }
 }
@@ -215,14 +221,16 @@ $footerColor: #FACBCD;
 
 // styling for the imported KitchenAndFood function
 #orderList{
- border: 1px black solid;
- padding: 0.5rem;
- width: max-content;
+//  border: 1px black solid;
+//  box-shadow: 1px 1px 2px grey;
+ padding: 1.5rem 1.3rem;
+ width: 20rem;
  border-radius: 15px;
 
  .location{
   display: flex;
   align-items: center;
+  gap: 0;
   width: 13rem;
 
   .iconSvg{
@@ -232,17 +240,21 @@ $footerColor: #FACBCD;
 }
 
  img{
-  height: 15rem;
+  height: 12rem;
+  width: 100%;
  }
  #details{
+  margin-top: 1rem;
+
   .foodName{
-   font-size: 28px;
+   font-size: 22px;
    font-family: "Poppins", serif;
    font-weight: bold;
   }
   div{
    @include flexCenter(row);
-   font-size: 20px;
+   font-size: 18px;
+   margin-top: 0.2rem;
    justify-content: space-between;
   }
   .makeOrder{
@@ -345,7 +357,7 @@ footer{
    
   li{
    list-style: none;
-   font-size: 25px;
+   font-size: 20px;
 
    &:hover{
     cursor: pointer;
@@ -386,9 +398,6 @@ footer{
               display: block;
 
             }
-          // &:hover .mobile-menuBar{
-          //   display: block;
-          // }  
           
         } 
 
@@ -415,6 +424,7 @@ footer{
         }
         select{
           width: 8rem;
+          padding: 0.8rem;
         }
         #search-btn{
           display: block;
@@ -431,7 +441,7 @@ footer{
 // order items
 
   #orderList{
-    border: 1px black solid;
+    // border: 1px black solid;
     padding: 0.5rem;
     width: 18rem;
     border-radius: 15px;
@@ -440,6 +450,7 @@ footer{
      display: flex;
      align-items: center;
      width: 13rem;
+     
    
      .iconSvg{
      height: 2rem;
