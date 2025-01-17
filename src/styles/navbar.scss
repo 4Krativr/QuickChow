@@ -16,6 +16,7 @@ nav{
         border: none;
         outline: none;
         margin: 0 !important;
+        //display; none
     }
     .collapse-btn:active, .collapse-btn:focus{
         border: none;
@@ -73,9 +74,18 @@ nav{
         width: 100px;
     }
     .navbar-nav{
+        align-items: end;
+        margin-top: 20px;
+        gap: 10px;
         li{
             font-size: 1.2rem;
             margin-left: 15px;
         }
+    }
+    .nav-btn-div{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 20px !important;
     }
 }
