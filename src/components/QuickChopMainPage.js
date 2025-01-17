@@ -12,15 +12,18 @@ import dropdownIcon from '../assets/mainPage-images/angle-down.svg'
 import location from '../assets/mainPage-images/location-point.svg'
 import menuBar from '../assets/mainPage-images/bars.svg'
 import { useState } from "react";
+import foodimage1 from '../assets/mainPage-images/food-image (1).png'
+import foodimage2 from '../assets/mainPage-images/food-image (2).png'
 
 
-function KitchenAndFood() {
+
+function KitchenAndFood({foodLink, foodName = 'Fried Rice & Chicken'}) {
   return(
     <>
         <div id="orderList">
-            <img src={foodimage} alt="food" />
+            <img src={foodLink} alt="food" />
             <div id="details">
-                <span className="foodName">Fried Rice & Chicken</span>
+                <span className="foodName">{foodName}</span>
                 <div>
                   <span>Food Mattaz Kitchen</span>
                   <span>N2,500.00</span>
@@ -45,6 +48,12 @@ function MainPage() {
     setMenubarAction(!menuBarVisible);
   }
 
+const [serviceListVisible, setServiceList] = useState(false);
+
+const toggleServiceList = () => {
+  setServiceList(!serviceListVisible);
+}
+
  return (
   <>
     <div class="mainHeader">
@@ -52,13 +61,12 @@ function MainPage() {
       <nav className="mainNavBar">
         <img src={quickchowLogo}  alt="logo"/>
         <div className="listItems">
-          <li id="serviceList">Services <img src={dropdownIcon} className="service dropdown" alt='dropdowm' />
-          <div className="dropdownList">
-            <li>--services list--</li>
-            <li>--services list--</li>
-            <li>--services list--</li>
-            <li>--services list--</li>
-            <li>--services list--</li>
+          <li id="serviceList" onClick={toggleServiceList}>Services <img src={dropdownIcon} className="service dropdown" alt='dropdowm' />
+          <div className="dropdownList" style={{display: serviceListVisible ? 'block' : 'none'}}>
+            <li>Deliveries</li>
+            <li>Restaurants</li>
+            <li>Couriers</li>
+            
           </div>
           </li>
           <li>About us</li>
@@ -73,13 +81,11 @@ function MainPage() {
 
             <div style={{display: menuBarVisible ? 'block' : 'none'}} className="mobile-menuBar">
             <li id="serviceList-mobile">
-              <div style={{display: 'flex', alignItems: 'center'}}>Services <img src={dropdownIcon} className="service dropdown" alt='dropdowm' /></div>
-              <div className="dropdownList-mobile">
-                <li>service</li>
-                <li>service</li>
-                <li>service</li>
-                <li>service</li>
-                <li>service</li>
+              <div style={{display: 'flex', alignItems: 'center'}} onClick={toggleServiceList}>Services <img src={dropdownIcon} className="service dropdown" alt='dropdowm' /></div>
+              <div className="dropdownList-mobile" style={{display: serviceListVisible ? 'block' : 'none'}}>
+              <li>Deliveries</li>
+              <li>Restaurants</li>
+              <li>Couriers</li>
               </div>
             </li>
             <li>About us</li>
@@ -98,7 +104,7 @@ function MainPage() {
       <div id="orderInputs">
               <div>
                 <select>
-                    <option value=''>Select Kitchen</option>
+                    <option value='' selected> Select Kitchen </option> 
                     <option value='option1'>--Kitchen Name--</option>
                     <option value='option2'>--Kitchen Name--</option>
                     <option value='option3'>--Kitchen Name--</option>
@@ -131,21 +137,22 @@ function MainPage() {
         <h2>Available Kitchens</h2>
 
         <div className="foodGridContainer">
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood /> 
-            <KitchenAndFood />
-            <KitchenAndFood />
-            <KitchenAndFood />
+            <KitchenAndFood foodLink={foodimage} foodName={'Fried Rice & Chicken'} />
+            <KitchenAndFood foodLink={foodimage1} foodName={'Hamburger'}/>
+            <KitchenAndFood foodLink={foodimage2} foodName={'Hot Pasta'}/>
+            <KitchenAndFood foodLink={foodimage}/>
+            <KitchenAndFood foodLink={foodimage2} foodName={'Hot Pasta'}/>
+            <KitchenAndFood foodLink={foodimage1} foodName={'Hamburger'}/>
+            <KitchenAndFood foodLink={foodimage}/>
+            <KitchenAndFood foodLink={foodimage2} foodName={'Hot Pasta'}/>
+            <KitchenAndFood foodLink={foodimage1} foodName={'Hamburger'}/>
+            <KitchenAndFood foodLink={foodimage} />
+            <KitchenAndFood foodLink={foodimage1} foodName={'Hamburger'}/>
+            <KitchenAndFood foodLink={foodimage2} foodName={'Hot Pasta'}/>
+            <KitchenAndFood foodLink={foodimage}/>
+            <KitchenAndFood foodLink={foodimage2} foodName={'Hot Pasta'}/>
+            <KitchenAndFood foodLink={foodimage1} foodName={'Hamburger'}/>
+            
 
         </div>
 
