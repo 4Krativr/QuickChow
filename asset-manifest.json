@@ -1,29 +1,39 @@
 {
   "files": {
-    "main.css": "/QuickChow/static/css/main.89a98214.css",
-    "main.js": "/QuickChow/static/js/main.18c8633b.js",
+    "main.css": "/QuickChow/static/css/main.180eee3a.css",
+    "main.js": "/QuickChow/static/js/main.10137728.js",
+    "static/media/heroBg.png": "/QuickChow/static/media/heroBg.35853131e6d34399ea96.png",
     "static/media/floating-img-1.png": "/QuickChow/static/media/floating-img-1.cadf30c4d2024f3e4857.png",
     "static/media/floating-img-2.png": "/QuickChow/static/media/floating-img-2.2b4364d9d5b997fcb0bc.png",
     "static/media/order-food-img.svg": "/QuickChow/static/media/order-food-img.e3ec7ab640a602f707c651cee17dcd0e.svg",
     "static/media/delivery-img.svg": "/QuickChow/static/media/delivery-img.85f88930c0345156feb7028f8a9f9bf5.svg",
     "static/media/good-quality-img.svg": "/QuickChow/static/media/good-quality-img.77edc1a8b4ed035c1c4684d6e3add109.svg",
     "static/media/hero-food-img.png": "/QuickChow/static/media/hero-food-img.506dc0601cad49c67154.png",
-    "static/media/flaoting-img-3.png": "/QuickChow/static/media/flaoting-img-3.355a63c77364145db8bb.png",
+    "static/media/floating-img-3.png": "/QuickChow/static/media/floating-img-3.355a63c77364145db8bb.png",
     "static/media/PH.png": "/QuickChow/static/media/PH.d451002994dd5215cdba.png",
     "static/media/chef-img.png": "/QuickChow/static/media/chef-img.1c43090c91192a38c6fe.png",
     "static/media/onion.svg": "/QuickChow/static/media/onion.311e5f9b06f9497474e25519ff6a8e82.svg",
     "static/media/customer.svg": "/QuickChow/static/media/customer.6b8e25a39a815dd3d4a7bd835b024d19.svg",
     "static/media/customer-2.svg": "/QuickChow/static/media/customer-2.f70d38bc5f4ecc085f7989f1eec87a06.svg",
     "static/media/Ellipse 8.svg": "/QuickChow/static/media/Ellipse 8.48b27bbb2aa24ac05a119f577623d73d.svg",
+    "static/media/logistics.png": "/QuickChow/static/media/logistics.403a15d135bbc7c9cad0.png",
+    "static/media/promotion.png": "/QuickChow/static/media/promotion.377c9d96bc479617c5c4.png",
+    "static/media/work.png": "/QuickChow/static/media/work.ec393bbc0d7ea959868e.png",
+    "static/media/earnings.png": "/QuickChow/static/media/earnings.70ef0bdddfcb8850da6f.png",
+    "static/media/time.png": "/QuickChow/static/media/time.0547e6750777f9217197.png",
     "static/media/quick-chow-logo.png": "/QuickChow/static/media/quick-chow-logo.02aadda2336e4d060a6e.png",
+    "static/media/convenience.png": "/QuickChow/static/media/convenience.3ff02eb97d4f88b4dc48.png",
+    "static/media/visibility.png": "/QuickChow/static/media/visibility.7115b463e5327e0ef6eb.png",
+    "static/media/sales.png": "/QuickChow/static/media/sales.c7a84bc4c10871712029.png",
+    "static/media/bonus.png": "/QuickChow/static/media/bonus.fa32e7be47d8bc7341cf.png",
     "static/media/leaf-img.png": "/QuickChow/static/media/leaf-img.4e98511aa38ff73c66c5.png",
     "index.html": "/QuickChow/index.html",
     "static/media/password-img.svg": "/QuickChow/static/media/password-img.a54de469d02803775b41a6b5251b2997.svg",
-    "main.89a98214.css.map": "/QuickChow/static/css/main.89a98214.css.map",
-    "main.18c8633b.js.map": "/QuickChow/static/js/main.18c8633b.js.map"
+    "main.180eee3a.css.map": "/QuickChow/static/css/main.180eee3a.css.map",
+    "main.10137728.js.map": "/QuickChow/static/js/main.10137728.js.map"
   },
   "entrypoints": [
-    "static/css/main.89a98214.css",
-    "static/js/main.18c8633b.js"
+    "static/css/main.180eee3a.css",
+    "static/js/main.10137728.js"
   ]
 }
