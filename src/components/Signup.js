@@ -22,8 +22,17 @@ function FormValidate(){
     })
     
 }
+ export function role(){
+    console.log('Customer')
+    const userRole = document.querySelector('.js-select-role').value;
+    if(userRole === 'Customer'){
+        console.log('Customer')
+    }else{
+        console.log('Not a customer')
+    }
+}
 
-function Login(){
+function SignUp(){
      //This block of code removes the "overflow: hidden" style which prevents the webpage to scroll horizontally or vertically
     const location = useLocation();
     useEffect(() => {
@@ -117,4 +126,4 @@ function Login(){
       </main>
     )
 }
-export default Login
+export default SignUp;

@@ -1,27 +1,29 @@
 $poppins: "Poppins", sans-serif;
 $red: #D22D33;
 $pink: #FACBCD;
+$lato: "Lato", sans-serif;
+
 //Type in Ctrl + F to find the elements which bear the corresponding classes
 main{
     padding: 0px 80px;
 }
 .services{
-    .card-services{
-        display: flex;
-        justify-content: space-between;
-        .card-content{
-            border: none;
-            .card-img-div{
-                border: 1px solid #f0eeee;
-                border-radius: 10px;
-                height: 300px;
-                width: 400px;
-                img{
-                    border-radius: 10px;
-                }
-            }
-        }
-    }
+    // .card-services{
+    //     display: flex;
+    //     justify-content: space-between;
+    //     .card-content{
+    //         border: none;
+    //         .card-img-div{
+    //             border: 1px solid #f0eeee;
+    //             border-radius: 10px;
+    //             height: 300px;
+    //             width: 400px;
+    //             img{
+    //                 border-radius: 10px;
+    //             }
+    //         }
+    //     }
+    // }
     .services-title{
         display: flex;
         flex-direction: column;
@@ -45,11 +47,15 @@ main{
     }
     .services-content{
         display: flex;
+        flex-wrap: wrap;
         align-items: start;
         justify-content: space-around;
-        gap: 20px;
+        gap: 50px;
         div{
             display: flex;
+            flex: 1 1 300px; 
+            min-width: 150px; 
+            max-width: 100%;
             flex-direction: column;
             margin-top: 24px;
             padding: 0px !important;
@@ -57,7 +63,6 @@ main{
             .service-img{
                 width: 100%;
                 border-radius: none;
-                object-fit: cover;
                 margin-bottom: 30px;
             }
             h3{
@@ -86,16 +91,45 @@ main{
         }
     }
 }
-
+.jumbo{
+    margin: 150px -80px;
+    height: 500px;
+    color: white; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .overlay{
+        filter: brightness(0.5);
+        background: url("/assets/mainPage-images/heroBg.png") no-repeat center;
+        background-size: cover; 
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    .jumbo-content{
+        position: relative;
+        z-index: 2;
+        h1{
+            font-weight: light;
+            font-size: 4rem;
+        }
+        p{
+            line-height: 40px;
+        }
+    }
+}
 
 .reviews{
-    margin-top: 150px;
+    margin: 150px 0px;
     .reviews-img-div{
         position: relative;
         padding: 0;
         text-align: center;
         .reviews-img{
-            width: 550px;
+            width: 100%;
         }
         .floating-leaf{
             position: absolute;
@@ -137,9 +171,9 @@ main{
             height: 161px;
             display: flex;
             flex-direction: column;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             justify-content: center;
             h1{
-                font-family: Lato, 'sans-serif';
                 color: black;
                 font-size: 1.5rem;
                 margin-bottom: 20px;
@@ -176,8 +210,12 @@ main{
     }
     .reviews-box{
         align-items: start;
+        gap: 60px;
     }
     .reviews-content{
+        flex: 1 1 300px; 
+        min-width: 150px; 
+        max-width: 600px;
         h1{
             width: 500px;
             font-weight: 800;
@@ -229,45 +267,58 @@ main{
                 }
             }
         }
-        .customer-reviews{
+        .services-header{
+            h1{
+                font-size: 60px;
+                width: 100%;
+    
+            }
+            h4{
+                font-size: 19px;
+                margin-bottom: 50px;
+                line-height: 30px;
+            }
+        }
+        .services-benefits{
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 33px;
-            .customer-reviews-content{
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                img{
-                    width: 45px;
+            width: 100%;
+            gap: 30px;
+            .benefits{
+                h4{
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-family: $lato;
                 }
-                div{
-                    p, h6{
-                        margin: 0;
-                    }
-                    p{
-                        font-size: 14px;
-                        color: #828282;
-                        font-weight: 400;
-                    }
-                    h6{
-                        font-family: $poppins;
-                        font-size: 16px;
+                p{
+                    width: 200px;
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+                .service-image{
+                    width: 80px;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                    padding: 10px 0px;
+                    display: flex;
+                    justify-content: center;
+                    background-color:rgba(210, 45, 51, 0.1);
+                    img{
+                        width: 50px;
+                        filter: invert(17%) sepia(86%) saturate(3639%) hue-rotate(348deg) brightness(93%) contrast(81%);
                     }
                 }
             }
-            .star-rating{
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                p{
-                    margin: 0;
-                    font-size: 14px;
-                    margin-top: 3px;
-                }
-                img{
-                    width: 120px;
-                }
+        }
+        .join-now{
+            margin-top: 5%;
+            button{
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding: 15px 50px;
+                background: $red;
+                border: none;
+                border-radius: 50px;
+                color: white;
             }
         }
     }
@@ -362,16 +413,34 @@ main{
     }
 }
 
+//Media queries for mobile devices from 576px below
 @media (max-width: 576px){
     main{
         padding: 0px 20px;
+        .jumbo{
+            margin: 150px -22px;
+            .jumbo-content{
+                h1{
+                    font-size: 50px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    line-height: 35px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
         .services{
             padding: 0px 10px;
             justify-content: center;
             .services-content{
                 padding: 0px 10px;
-                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 gap: 40px;
+                div{
+                    max-width: 100% !important;
+                }
             }
             .services-title{
                 h1{
@@ -396,7 +465,7 @@ main{
             }
             .reviews-box{
                 width: 100%;
-                gap: 180px;
+                gap: 220px;
                 .reviews-img{
                     width: 100% !important;
                 }
@@ -415,6 +484,20 @@ main{
                     h4{
                         font-size: 16px;
                     }
+                }
+                .services-header{
+                    h1{
+                        font-size: 40px;
+                    }
+                }
+                .services-benefits{
+                    flex-direction: column;
+                    p{
+                        width: 100% !important;
+                    }
+                }
+                .join-now{
+                    margin-top: 40px;
                 }
             }
             .floating-leaf{
@@ -441,7 +524,7 @@ main{
             .customer-count{
                 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
                 top: 350px;
-                left: 120px;
+                left: 100px;
                 width: 230px !important;
                 height: 150px !important;
                 padding: 12px 16px;
@@ -470,6 +553,66 @@ main{
             .download-img{
                 width: 90%;
                 height:45vh;
+                left: 20px;
+                // background-size: 100% 100%;
+            }
+        }
+    }
+}
+
+//Media queries for mobile devices greater than 576px but less than 768px
+@media(min-width: 576px) and (max-width: 768px){
+    main{
+        padding: 0px 30px;
+        .services{
+            .services-content{
+                align-items: center;
+                div{
+                    max-width: 100% !important;
+                }
+            }
+        }
+        .reviews{
+            max-width: 100%;
+            .reviews-box{
+                align-items: center !important;
+                justify-content: center;
+                gap: 150px;
+            }
+            .services-benefits{
+                justify-content: space-between !important;
+                .benefits{
+                    p{
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        .jumbo{
+            margin: 0px -30px;
+        }
+        .download{
+            padding: 50px 30px;
+            height: 900px;
+            .download-content{
+                padding: 0px 15px;
+                margin-bottom: 50px;
+                .download-content-text{
+                    h4{
+                        font-size: 0.9rem;
+                    }
+                    h1{
+                        font-size: 35px;
+                    }
+                }
+                .download-btn{
+                    display: flex;
+                    gap: 0px;
+                }
+            }
+            .download-img{
+                width: 92%;
+                height:50vh;
                 left: 20px;
                 // background-size: 100% 100%;
             }

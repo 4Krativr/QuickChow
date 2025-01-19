@@ -23,9 +23,6 @@ nav{
         box-shadow: none;
         outline: none;
     }
-    .quick-chow-logo{
-        width: 150px;
-    }
     .services-dropdown{
         ul{
             border: none;
@@ -45,25 +42,15 @@ nav{
             font-size: 14px;
             font-weight: 500;
         }
-        .nav-btn-signup{
-            background-color: $red;
-            color: white;
-            font-family: $poppins;
-            width: 135px;
-            height: 45px;
-            border-radius: 50px;
-            border: none;
-            font-size: 14px;
-            font-weight: 500;
-        }
     }
     a{
         font-family: $poppins;
     }
 }
-.navbar-shadow {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
-  }
+.order-btn:hover{
+    background-color:rgba(210, 45, 51, 0.95);
+    transition: 0.15s;
+}
 
 //This media query is for mobile devices or screen sizes less than or equal to 576px
 @media (max-width: 576px){
@@ -89,3 +76,5 @@ nav{
         gap: 20px !important;
     }
 }
+
+//This media query is for mobile devices or screen sizes less than 768px and greater than 576px;

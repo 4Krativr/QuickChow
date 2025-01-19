@@ -41,24 +41,33 @@ function Main(){
 
     //This function takes a perimeter which generates the HTML for the customer reviews.
     function generateReview(reviews){
-        return `
-                <p class="lead">
-                   ${reviews.review}
-                </p>
-                <div class="customer-reviews">
-                    <div class="customer-reviews-content">
-                        <img src=${reviews.profilePic} alt="A customer profile" loading= "lazy"/>
-                        <div>
-                            <h6>${reviews.name}</h6>
-                            <p>${reviews.class}</p>
-                        </div>
+        let benefitsHTML = ''
+        const benefits = reviews.benefits
+        for(let i = 0; i < benefits.length; i++){
+            benefitsHTML += 
+            `   <div class= 'benefits'>
+                    <div class= 'service-image'>
+                        <img src= ${benefits[i].image} loading= 'lazy'/>
                     </div>
-                    <div class="star-rating">
-                    <img src=${reviews.star} alt='star rating' loading= "lazy"/>
-                        <p>4.8</p>
-                    </div>
+                    <h4>${benefits[i].title}</h4>
+                    <p>${benefits[i].text}</p>
                 </div>
             `
+        }
+        const renderBenfits = `
+            <div class="services-header">
+                <h1>Join as a ${reviews.profile}</h1>
+                <h4>${reviews.header}</h4>
+            </div>
+            <div class= "services-benefits">
+                ${benefitsHTML}
+            </div>
+            <div class= "join-now">
+                <a href = ${reviews.link} target= "_blank">
+                <button>Join Now</button>
+            </div>
+        `
+        return renderBenfits;
     }
     //The useEffect hook manages and rerenders the content on the web page
     useEffect(() => {
@@ -92,13 +101,13 @@ function Main(){
     }, []);
     return(
         <main>
-            <section className= "container services" id='services'>
+             <section className= "container services" id='services'>
                 <div className="services-title">
                     <h4>WHAT WE SERVE</h4>
                     <h1>Your Favourite Food Delivery Partner</h1>
                 </div>
-                <div className="row g-5 py-5 row-cols-1 row-cols-lg-3 mt-3 services-content">
-                    <div className="feature col">
+                <div className="row py-5 mt-3 services-content">
+                    <div className="col">
                         <img src={womanOrder} alt="delivery" className='service-img' loading="lazy"/>
                         <h3 className="fs-3 text-body-emphasis">Easy To Order</h3>
                         <p>
@@ -109,7 +118,7 @@ function Main(){
                             <img src={rightLink} alt="arrow link" className='right-arrow-link' loading= "lazy"/>
                         </a>
                     </div>
-                    <div className="feature col">    
+                    <div className="col">    
                         <img src={riders} alt="delivery" className='service-img' loading="lazy" />
                         <h3 className="fs-3 text-body-emphasis">Fast Delivery</h3>
                         <p>
@@ -120,7 +129,7 @@ function Main(){
                             <img src={rightLink} alt="arrow link" className='right-arrow-link' loading= "lazy"/>
                         </a>
                     </div>
-                    <div className="feature col">
+                    <div className="feature col service">
                         <img src={waiters} alt="delivery" className='service-img' loading="lazy"/>
                         <h3 className="fs-3 text-body-emphasis">Best Quality</h3>
                         <p>
@@ -135,8 +144,8 @@ function Main(){
             </section>
 
             <section className="reviews container" id='reviews'>
-                <div className="row g-5 py-5 reviews-box">
-                    <div className="col-lg-6 reviews-img-div">
+                <div className="row py-5 reviews-box">
+                    <div className="col-lg-5 reviews-img-div">
                         <img src={reviewsImg} className="reviews-img" alt="quickchow review" loading="lazy"/>
                         <div className="floating-leaf">
                             <img src={leaf} alt="a leaf" loading= "lazy"/>
@@ -162,7 +171,7 @@ function Main(){
                     </div>
                     <div className="col-lg-6 reviews-content">
                         <div className="reviews-title">
-                            <h4>WHAT THEY SAY</h4>
+                            <h4>OUR BENEFITS</h4>
                             <div className="reviews-title-arrows">
                                 <div className="left-arrow js-left-arrow">
                                     <img src={leftArrow} alt="left arrow icon" loading= "lazy"/>
@@ -172,11 +181,27 @@ function Main(){
                                 </div>
                             </div>
                         </div>
-                        <h1 className="mb-3">What Our Customers Say About Us</h1>
                         <div className='js-review-content'></div>
                     </div>
                 </div>
             </section>
+
+            <div className="jumbo">
+                    <div className='overlay'></div>
+                    <div class="p-5 text-center jumbo-content">
+                        <div class="container jumbo-content">
+                            <h1 className='mb-3'>Love food? So do we</h1>
+                            <p class="col-lg-8 mx-auto lead">
+                                Craving something delicious? Join our WhatsApp Foodie Group to order now! <span className='d-none d-lg-block'>
+                                    Discover mouthwatering meals, exclusive deals, and fast delivery right at your fingertips. Don't miss out—your next favorite meal is just a click away!"
+                                </span>
+                            </p>
+                            <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank'>
+                                <button className='nav-btn-signup join-now'>Join Now</button>
+                            </a>
+                        </div>
+                    </div>
+            </div>
 
             <section className="download  container">
                 <div className="row g-5">

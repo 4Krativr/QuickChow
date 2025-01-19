@@ -31,10 +31,10 @@ function Hero(){
                         </div>
                     </div>
                     <div className="fire-div">
-                        <img src={fireIcon} alt="A fire" />
+                        <img src={fireIcon} alt="A fire"  loading='lazy'/>
                     </div>
                     <div className="timer-div">
-                        <img src={timerImg} alt="A timer" />
+                        <img src={timerImg} alt="A timer" loading='lazy'/>
                     </div>
                 </div>
                 <div className="col-lg-6 hero-content">
@@ -51,13 +51,11 @@ function Hero(){
                         Explore local restaurants and get food delivered fast and fresh. Our job is to satisfy your cravings with and fast and quality delivery.
                     </p>
                     <div className="d-grid gap-2 d-md-flex hero-btn">
-                    <button type="button" className="order-btn" onClick={() => navigate('HomePage')}>
-                        Order Food
-                    </button>
-                    <div type="button" className="watch-video-btn">
-                        <img src={videoimg} alt="A video icon" />
-                        <p>Watch Video</p>
-                    </div>
+                    <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank'>
+                        <button type="button" className="order-btn">
+                            Order Now
+                        </button>
+                    </a>
                     </div>
                 </div>
             </div>

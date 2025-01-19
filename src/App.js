@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Login from './components/Login.js';
 import Signup from './components/Signup.js';
 import { LandingPage } from "./LandingPage/LandingPage.jsx";
-import MainPage from "./components/QuickChopMainPage.js";
+// import MainPage from "./components/QuickChopMainPage.js";
 
 function App(){
     return(
@@ -16,7 +16,7 @@ function App(){
           <Route path='/QuickChow/signup' element={<Signup />} />
           <Route path='/QuickChow/Login/signup' element={<Signup />} />
           <Route path='/QuickChow/signup/Login' element={<Login />} />
-          <Route path='/QuickChow/HomePage' element={<MainPage />} />
+          {/* <Route path='/QuickChow/HomePage' element={<MainPage />} /> */}
           <Route path="*" element={<Navigate to='/QuickChow/Login' replace />} />
         </Routes>
 

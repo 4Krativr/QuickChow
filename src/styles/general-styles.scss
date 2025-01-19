@@ -1,8 +1,27 @@
 $poppins: "Poppins", sans-serif;
 $lato: "Lato", sans-serif;
+$red: #D22D33;
 p{
     font-family: $poppins;
 }
 h1{
     font-family: $lato;
+}
+.nav-btn-signup{
+    background-color: $red;
+    color: white;
+    font-family: $poppins;
+    width: 135px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+.nav-btn-signup:hover{
+    background-color:rgba(210, 45, 51, 0.95);
+    transition: 0.15s;
+}
+.quick-chow-logo{
+    width: 150px;
 }

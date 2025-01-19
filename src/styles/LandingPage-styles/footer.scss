@@ -3,96 +3,115 @@ $poppins: "Poppins", serif;
 $lato: "Lato", sans-serif;
 $pink: #FACBCD;
 //Type in Ctrl + F to find the elements which bear the corresponding classes
+// .footer{
+//     position: relative;
+//     padding: 0px 100px;
+//     margin-top: 150px;
+//     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+//     background-color: $pink;
+//     .footer-info{
+//         .a-link{
+//             color: $redColor;
+//         }
+//     }
+//     .footer-logo{
+//         width: 200px;
+//     }
+//     h5{
+//         font-size: 20px;
+//         font-weight: 600;
+//         margin-bottom: 20px;
+//     }
+//     li{
+//         font-size: 16px;
+//     }
+//     .socials{
+//         p{
+//             width: 297px;
+//             margin-top: 20px;
+//         }
+//         .socials-icon{
+//             width: 60%;
+//             display: flex;
+//             margin-top: 44px;
+//             justify-content: space-between;
+//             img{
+//                 cursor: pointer;
+//                 width: 100%;
+//             }
+//         }
+//     }
+//     .news-letter{
+//         p{
+//             line-height: 30px;
+//             width: 300px;
+//         }
+//         div{
+//             width: 196px;
+//             height: 51px;
+//             border-radius: 60px;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-around;
+//             padding: 14px 20px;
+//             border: 1px solid $redColor;
+//             cursor: pointer;
+//             p{
+//                 margin: 0;
+//                 font-size: 14px;
+//                 font-family: $poppins;
+//                 width: 113px;
+//                 color: $redColor;
+//             }
+//             img{
+//                 width: 20px;
+//             }
+//         }
+//     }
+// }
 .footer{
-    position: relative;
-    padding: 0px 100px;
-    margin-top: 150px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    margin: 0px;
+    margin-top: 10%;
     background-color: $pink;
-    .footer-info{
-        .a-link{
-            color: $redColor;
-        }
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1); 
+    footer{
+        padding: 0px 50px;
     }
-}
-.footer-logo{
-    width: 200px;
-}
-h5{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-li{
-    font-size: 16px;
-}
-.socials{
-    p{
-        width: 297px;
-        margin-top: 20px;
-    }
-    .socials-icon{
-        width: 50%;
-        display: flex;
-        margin-top: 44px;
-        justify-content: space-between;
-        img{
-            cursor: pointer;
-            width: 24px;
-        }
-    }
-}
-.news-letter{
-    p{
-        line-height: 30px;
-        width: 300px;
-    }
-    div{
-        width: 196px;
-        height: 51px;
-        border-radius: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 14px 20px;
-        border: 1px solid $redColor;
-        cursor: pointer;
+    .footer-logo-div{
         p{
-            margin: 0;
-            font-size: 14px;
-            font-family: $poppins;
-            width: 113px;
-            color: $redColor;
+            margin-top: 15px;
         }
+    }
+    .un-list{
+        display: flex;
+        justify-content: end;
+        gap: 30px;
         img{
-            width: 20px;
+            width: 30px;
+            filter: invert(17%) sepia(86%) saturate(3639%) hue-rotate(348deg) brightness(93%) contrast(81%);
         }
     }
 }
 @media (max-width: 576px) {
     .footer{
         padding: 0px 10px;
+        margin-top: 15%;
         footer{
+            padding: 0px 20px;
             display: flex;
-            flex-direction: column-reverse;
-            .a-link{
-                color: $redColor;
+            align-items: start !important;
+            .footer-logo-div{
+                width: 50%;
             }
-            .footer-info{
-                display: flex;
-                flex-direction: column;
-            }
-            .news-letter{
-                width: 100%;
-                margin: 50px 0px;
-                h5{
-                    width: 100%;
-                }
-            }
-            .footer-logo{
-                width: 150px;
+        }
+        .quick-chow-logo{
+            width: 140px;
+        }
+        .un-list{
+            gap: 20px;
+            img{
+                width: 25px;
             }
         }
     }
-    
 }

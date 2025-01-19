@@ -1,37 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import quickchowLogo from '../assets/quick-chow-logo.png';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import '../styles/general-styles.scss'
 import '../styles/LandingPage-styles/navbar.scss';
 import { useNavigate } from 'react-router-dom';
+import UserRole from './userRole';
+
 
 function Navbar(){
-    //This javascript code activates the box shadow for the navbar when it scrolls past 50px vertically.
-    //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
+    const [showUserRole, setShowUserRole] = useState(false);
+    const handleButtonClick = () => {
+    // Toggle the state
+    setShowUserRole((prevState) => !prevState);
+    };
     const navigate = useNavigate()
-
-    const [shadow, setShadow] = useState(false);
-    useEffect(() => {
-        const handleScroll = () => {
-            if(window.scrollY > 50){
-                setShadow(true);
-            }else{
-                setShadow(false);
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll)
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-
     return(
-        <nav className={`nav navbar navbar-expand-lg container
-        ${shadow ? "navbar-shadow" : ""}`}>
+        <nav className={`nav navbar navbar-expand-lg container`}>
             <div className="container">
                 <a className="navbar-brand col-lg-3 me-0" href="#">
-                        <img src={quickchowLogo} alt="QuickChow logo" className= "quick-chow-logo"/>
+                        <img src={quickchowLogo} alt="QuickChow logo" className= "quick-chow-logo" loading='lazy'/>
                 </a>
                 <button className="navbar-toggler collapse-btn ms-auto d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
                 aria-controls="navbarOffcanvasLg"
@@ -59,18 +46,24 @@ function Navbar(){
                         <a className="nav-link active" aria-current="page" href="#">About Us</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link active" href="reviews">Testomonials</a>
+                        <a className="nav-link active" href="#">Testomonials</a>
                         </li>
                         <li className="nav-item">
                         <a className="nav-link active" aria-disabled="true" href='#'>Contact</a>
                         </li>
                     </ul>
                     <div className="d-lg-flex nav-btn-div col-lg-5 justify-content-lg-end">
-                        <button className="nav-btn-login" onClick={() => navigate('authentication')}>Log in</button>
-                        <button className="nav-btn-signup" onClick={() => navigate('signup')}>Sign Up</button>
+                        {/* <button className="nav-btn-login" onClick={() => navigate('authentication')}>Log in</button>
+                        <button className="nav-btn-signup" onClick={handleButtonClick}>Sign Up</button> */}
+                        <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank'>
+                            <button className='nav-btn-signup'>
+                                Order Now
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
+            {showUserRole && <UserRole />}
         </nav>
     )
 }
