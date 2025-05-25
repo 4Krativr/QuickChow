@@ -16,23 +16,23 @@ function Footer(){
         <div className='container-fluid footer'>
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-5">
                 <div class="col-md-4 footer-logo-div">
-                    <a href="/" class="me-2 mb-md-0">
+                    <a href="/QuickChow" class="me-2 mb-md-0">
                         <img src={quickchowLogo} alt="quickchow logo" className='quick-chow-logo'/>
                     </a>
                     <p className='text-secondary'>© 2024 QuickChow, Foods. All rights reserved.</p>
                 </div>
 
                 <ul class="nav col-md-4 list-unstyled un-list">
-                    <a href="">
-                        <img src={instagram} alt="instagram-logo" />
+                    <a href="https://www.instagram.com/quickchow.app/?igsh=NjBwam01NnhiYjNu" target='_blank' rel='noreferrer'>
+                        <img src={instagram} alt="instagram-logo" loading='lazy'/>
                     </a>
-                    <a href="">
+                    <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank' rel='noreferrer'>
                         <img src= {whatsapp} alt="whatsapp-logo" />
                     </a>
-                    <a href="">
+                    <a href="https://x.com/quickchowapp?s=21" target='_blank' rel='noreferrer'>
                         <img src={twitter} alt="twitter-logo" />
                     </a>
-                    <a href="">
+                    <a href="https://web.facebook.com/share/p/1Ec38uhsrk/" target='_blank' rel='noreferrer'>
                         <img src={facebook} alt="facebook-logo" />
                     </a>
                 </ul>

@@ -619,3 +619,10 @@ main{
         }
     }
 }
+
+//Media queries for mobile devices greater than 768px but less than 992px
+@media (min-width: 768px) and (max-width: 992px){
+    .service{
+        background-color: red;
+    }
+}

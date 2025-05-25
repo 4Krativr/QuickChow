@@ -79,7 +79,7 @@ $poppins: "Poppins", sans-serif;
     h1{
         font-size: 60px;
         font-weight: 800;
-        line-height: 1.5em;
+        line-height: 1.3em;
         width: 573px;
     }
     p{
@@ -124,9 +124,24 @@ $poppins: "Poppins", sans-serif;
    .hero-box{
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
         padding: 0;
         width: 100%;
+        .hero-food{
+            .floating-customer-div{
+                display: none;
+            }
+            .timer-div{
+                left: 0;
+                img{
+                    width: 60px;
+                }
+            }
+            .fire-div{
+                right: 0;
+            }
+        }
         .hero-content{
             gap: 20px;
             padding: 0;
@@ -135,7 +150,6 @@ $poppins: "Poppins", sans-serif;
                 width: 90%;
                 text-align: center;
                 font-size: 40px;
-                line-height: 1.5em;
             }
             p{
                 text-align: center;
@@ -162,12 +176,19 @@ $poppins: "Poppins", sans-serif;
 }
 
 @media (min-width: 576px) and (max-width: 768px){
+    .container-box{
+        .hero-box{
+            flex-direction: column-reverse;
+            align-items: center;
+            width: 100% !important;
+        }
+    }
     .hero-content{
         display: flex;
         align-items: center;
         h1, p{
-            text-align: center;
             margin-bottom: 20px;
+            width: 100%;
         }
     }
 }

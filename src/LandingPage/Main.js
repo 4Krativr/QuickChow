@@ -1,6 +1,7 @@
 import '../styles/LandingPage-styles/main.scss';
+import 'animate.css';
 import { customerReview } from '../data/customerData';
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import '../styles/general-styles.scss';
 import 'animate.css';
 import womanOrder from '../assets/main-images/order-food-img.svg';
@@ -55,7 +56,7 @@ function Main(){
             `
         }
         const renderBenfits = `
-            <div class="services-header">
+            <div class="services-header animate__fadeInLeft">
                 <h1>Join as a ${reviews.profile}</h1>
                 <h4>${reviews.header}</h4>
             </div>
@@ -113,7 +114,7 @@ function Main(){
                         <p>
                             It only takes a few steps to order delicious meals from our mobile app.
                         </p>
-                        <a href="">
+                        <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds">
                             Get Started
                             <img src={rightLink} alt="arrow link" className='right-arrow-link' loading= "lazy"/>
                         </a>
@@ -124,7 +125,7 @@ function Main(){
                         <p>
                         Experience lightning-fast delivery that brings your favorite meals to your doorstep in no time.
                         </p>
-                        <a href="">
+                        <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds">
                             Get Started
                             <img src={rightLink} alt="arrow link" className='right-arrow-link' loading= "lazy"/>
                         </a>
@@ -135,7 +136,7 @@ function Main(){
                         <p>
                         Savor every bite with top-quality food, made from the freshest ingredients.
                         </p>
-                        <a href="">
+                        <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds">
                             Get Started
                             <img src={rightLink} alt="arrow link" className='right-arrow-link' loading= "lazy"/>
                         </a>
@@ -154,10 +155,10 @@ function Main(){
                             <img src={leaf} alt="a leaf" loading= "lazy"/>
                         </div>
                         <div className="floating-onion">
-                            <img src={onion} alt="An onion image" loading= "lazy"/>
+                            <img src={onion} alt="An onion" loading= "lazy"/>
                         </div>
                         <div className="floating-onion-2">
-                            <img src={onion} alt="An onion image" loading= "lazy"/>
+                            <img src={onion} alt="An onion" loading= "lazy"/>
                         </div>
                         <div className="customer-count">
                             <h1>Our Reviews</h1>
@@ -181,7 +182,7 @@ function Main(){
                                 </div>
                             </div>
                         </div>
-                        <div className='js-review-content'></div>
+                        <div className='js-review-content animate__fadeInLeft'></div>
                     </div>
                 </div>
             </section>
@@ -196,7 +197,7 @@ function Main(){
                                     Discover mouthwatering meals, exclusive deals, and fast delivery right at your fingertips. Don't miss out—your next favorite meal is just a click away!"
                                 </span>
                             </p>
-                            <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank'>
+                            <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank' rel='noreferrer'>
                                 <button className='nav-btn-signup join-now'>Join Now</button>
                             </a>
                         </div>

@@ -1,24 +1,20 @@
-import { useNavigate } from 'react-router-dom';
 import '../styles/LandingPage-styles/hero.scss'
 import '../styles/general-styles.scss'
 import 'animate.css';
 import Navbar from './Navbar';
 import heroimg from '../assets/hero-images/hero-food-img.png';
-import videoimg from '../assets/hero-images/video-icon-img.png';
 import customerProfile from '../assets/hero-images/user-profile.png';
 import phoneImg from "../assets/hero-images/phone-icon.png";
 import fireIcon from "../assets/hero-images/fire-icon.png"
 import timerImg from "../assets/hero-images/timer-icon.png";
 function Hero(){
 
-    const navigate = useNavigate();
-
     return(
         //This website was created using bootstrap, the layout is and spacing contains a mixture of custom css and bootstrap css.  The font and color was created using custom css.
         <div className="container-fluid col-xxl-12 py-2 container-box">
              <Navbar />
-            <div className="container row flex-lg-row-reverse g-5 hero-box">
-                <div className="col-10 col-sm-8 col-lg-6 hero-food d-none d-lg-block">
+            <div className="container-md row flex-lg-row-reverse g-5 hero-box">
+                <div className="d-none d-lg-block col-10 col-sm-8 col-lg-6 hero-food">
                     <img src={heroimg} className="d-block  mx-lg-auto img-fluid" alt="food" width="700" height="500" loading="lazy"/>
                     <div className="floating-customer-div animate__animated animate__fadeInLeft">
                         <img src={customerProfile} alt="customer-img" />
@@ -51,7 +47,7 @@ function Hero(){
                         Explore local restaurants and get food delivered fast and fresh. Our job is to satisfy your cravings with and fast and quality delivery.
                     </p>
                     <div className="d-grid gap-2 d-md-flex hero-btn">
-                    <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank'>
+                    <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank' rel='noreferrer'>
                         <button type="button" className="order-btn">
                             Order Now
                         </button>

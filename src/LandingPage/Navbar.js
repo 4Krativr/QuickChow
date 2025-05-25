@@ -1,22 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import quickchowLogo from '../assets/quick-chow-logo.png';
-import React, { useState, useEffect} from "react";
+// import React, { useState} from "react";
 import '../styles/general-styles.scss'
 import '../styles/LandingPage-styles/navbar.scss';
-import { useNavigate } from 'react-router-dom';
-import UserRole from './userRole';
+// import { useNavigate } from 'react-router-dom';
+// import UserRole from './userRole';
 
 
 function Navbar(){
-    const [showUserRole, setShowUserRole] = useState(false);
-    const handleButtonClick = () => {
-    // Toggle the state
-    setShowUserRole((prevState) => !prevState);
-    };
-    const navigate = useNavigate()
+    // const [showUserRole, setShowUserRole] = useState(false);
+    // const handleButtonClick = () => {
+    // // Toggle the state
+    // setShowUserRole((prevState) => !prevState);
+    // };
+    // const navigate = useNavigate()
     return(
-        <nav className={`nav navbar navbar-expand-lg container`}>
-            <div className="container">
+        <nav className= "nav navbar navbar-expand-lg container-lg">
+            <div className="container-lg">
                 <a className="navbar-brand col-lg-3 me-0" href="#">
                         <img src={quickchowLogo} alt="QuickChow logo" className= "quick-chow-logo" loading='lazy'/>
                 </a>
@@ -55,7 +55,7 @@ function Navbar(){
                     <div className="d-lg-flex nav-btn-div col-lg-5 justify-content-lg-end">
                         {/* <button className="nav-btn-login" onClick={() => navigate('authentication')}>Log in</button>
                         <button className="nav-btn-signup" onClick={handleButtonClick}>Sign Up</button> */}
-                        <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank'>
+                        <a href="https://chat.whatsapp.com/IMhX7SXWv9n3CEpzaFnjds" target='_blank' rel='noreferrer'>
                             <button className='nav-btn-signup'>
                                 Order Now
                             </button>
@@ -63,7 +63,7 @@ function Navbar(){
                     </div>
                 </div>
             </div>
-            {showUserRole && <UserRole />}
+            {/* {showUserRole && <UserRole />} */}
         </nav>
     )
 }
