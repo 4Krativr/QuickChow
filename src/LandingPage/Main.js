@@ -1,7 +1,7 @@
 import '../styles/LandingPage-styles/main.scss';
 import 'animate.css';
 import { customerReview } from '../data/customerData';
-import { useEffect} from 'react';
+// import { useEffect, useState} from 'react';
 import '../styles/general-styles.scss';
 import 'animate.css';
 import womanOrder from '../assets/main-images/order-food-img.svg';
@@ -70,36 +70,41 @@ function Main(){
         `
         return renderBenfits;
     }
+    document.querySelector('.js-review-content').innerHTML = reviews()
     //The useEffect hook manages and rerenders the content on the web page
-    useEffect(() => {
-        document.querySelector('.js-review-content').innerHTML = reviews()
-        const handleClick = (move) => {
-            const customerLength = customerReview.length - 1;
-            if(move === '>'){
-                count++;
-            }
-            else if(move === '<'){
-                if(count === 0){
-                    count = customerLength;
-                }
-                else{
-                    count--;
-                }
-            }
-            document.querySelector('.js-review-content').innerHTML = reviews()
-        }
-        const handleRightClick = () => handleClick('>');
-        const handleLeftClick = () => handleClick('<');
-        //This  block of code targets the arrow buttons on the page. It gets the elements and adds and removes event listeners to avoid unexpected errors.
-        const rightArrow = document.querySelector('.js-right-arrow');
-        const leftArrow = document.querySelector('.js-left-arrow')
-        rightArrow?.addEventListener('click', handleRightClick);
-        leftArrow?.addEventListener('click', handleLeftClick);
-        return () => {
-            rightArrow?.removeEventListener('click', handleRightClick);
-            leftArrow?.removeEventListener('click', handleLeftClick);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const handleClick = (move) => {
+    //         const customerLength = customerReview.length - 1;
+    //         if(move === '>'){
+    //             count++;
+    //         }
+    //         else if(move === '<'){
+    //             if(count === 0){
+    //                 count = customerLength;
+    //             }
+    //             else{
+    //                 count--;
+    //             }
+    //         }
+    //         document.querySelector('.js-review-content').innerHTML = reviews()
+    //     }
+    //     const handleRightClick = () => handleClick('>');
+    //     const handleLeftClick = () => handleClick('<');
+    //     //This  block of code targets the arrow buttons on the page. It gets the elements and adds and removes event listeners to avoid unexpected errors.
+    //     const rightArrow = document.querySelector('.js-right-arrow');
+    //     const leftArrow = document.querySelector('.js-left-arrow')
+    //     rightArrow?.addEventListener('click', handleRightClick);
+    //     leftArrow?.addEventListener('click', handleLeftClick);
+    //     return () => {
+    //         rightArrow?.removeEventListener('click', handleRightClick);
+    //         leftArrow?.removeEventListener('click', handleLeftClick);
+    //     };
+    // }, []);
+
+    // const [cus, setCus] = useState(customerReview)
+    // function click(op){
+
+    // }
     return(
         <main>
              <section className= "container services" id='services'>
